@@ -29,6 +29,9 @@ download:
 links on request
 
 ## Pipelines:
+
+![pipeline](https://github.com/tillrobin/iMGMC/blob/master/pipeline.png)
+
 ### Requirements
 
 server with Linux operation system (~32Gb RAM ~10Gbyte disk space)
