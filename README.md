@@ -14,7 +14,7 @@
 Please cite our paper:
 
 **An integrated metagenome catalog enables novel insights into the murine gut microbiome**  
-Till Robin Lesker, Abilash Chakravarthy, Eric. J.C. Gálvez,  John Baines, Thomas Clavel, Alexander Sczyrba, Alice McHardy, Till Strowig
+Till Robin Lesker, Abilash Chakravarthy, Eric. J.C. Gálvez,  John Baines, Thomas Clavel, Alexander Sczyrba, Alice McHardy, Till Strowig http://biorxiv.org/cgi/content/short/528737v1
 
 ### External studies providing data:
 Xiao, Liang, et al. "A catalog of the mouse gut metagenome." Nature biotechnology 33.10 (2015): 1103-1108. http://doi.org/10.1038/nbt.3353
@@ -25,8 +25,8 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 
 
 ## Data:
-download:
-links on request
+
+download link will appear shortly.
 
 ## Pipelines:
 
