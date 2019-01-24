@@ -26,6 +26,22 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 
 ## Data:
 
+### Catalog:
+[iMGMC-GeneID.fasta.gz (~1GB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133644&authkey=AD4pwU2r1mk4FHU)
+
+### Assembly:
+[iMGMC-ConitgID.fasta.gz (~1.3GB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133647&authkey=AIM3mw3FbPE6b_M)
+
+### Mapping File (GeneID -> ContigID -> BinID)
+[iMGMC-map-Gene-Contig-Bin.tab.gz (~1GB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133646&authkey=AJM_z8-oLOlOO58)
+
+### Taxonomic anotations:
+download link will appear shortly.
+
+### Functional anotations:
+download link will appear shortly.
+
+### 16S rRNA sequences
 download link will appear shortly.
 
 ## Pipelines:
