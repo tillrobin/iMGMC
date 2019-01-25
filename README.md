@@ -7,8 +7,8 @@
 *Creation of in new mouse gut catalog with special features:*
   - more divers samples from different studies (12 Vendors incl. wildmice, gut locations)
   - clustering-free approch: all-in-one assembly, keep traking of each ORF to Contig to Bin
-  - higher taxonomic resolution and more accurate by using contig for the annotation
   - higher integration structure ORF > Contigs > Bin
+  - higher taxonomic resolution and more accurate by using contig for the annotation
   - 16S integration by linking to Bins
 
 Please cite our paper:
@@ -33,15 +33,18 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 [iMGMC-ConitgID.fasta.gz (~1.3GB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133647&authkey=AIM3mw3FbPE6b_M)
 
 ### Mapping File (GeneID -> ContigID -> BinID)
-[iMGMC-map-Gene-Contig-Bin.tab.gz (~1GB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133646&authkey=AJM_z8-oLOlOO58)
+[iMGMC-map-Gene-Contig-Bin.tab.gz (~30MB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133646&authkey=AJM_z8-oLOlOO58)
 
 ### Taxonomic anotations:
-download link will appear shortly.
+[iMGMC_map_taxonomy.tar.gz (~40MB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133736&authkey=AOjPxI-kDPJEpc8)
 
 ### Functional anotations:
 download link will appear shortly.
 
 ### 16S rRNA sequences
+download link will appear shortly.
+
+### 16S rRNA sequences IMNGS-data
 download link will appear shortly.
 
 ## Pipelines:
@@ -51,7 +54,6 @@ download link will appear shortly.
 ### Requirements
 
 server with Linux operation system (~32Gb RAM ~10Gbyte disk space)
-with standard tool like git, gawk, sed ...
 
 *External tools*
   - bbmap (for the mapping part)
@@ -59,10 +61,14 @@ with standard tool like git, gawk, sed ...
   - samtools (process bam files from other Mapping Tool)
     please download and install https://github.com/samtools/samtools/releases
 
-
 ### Genecatalog
 
-### PICRUSt
+instruction will appear shortly
+
+### PICRUSt (mouse gut specific)
+
+instruction will appear shortly
 
 ### IMNGS
 
+instruction will appear shortly
