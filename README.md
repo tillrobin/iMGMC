@@ -39,13 +39,13 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 [iMGMC_map_taxonomy.tar.gz (~40MB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133736&authkey=AOjPxI-kDPJEpc8)
 
 ### Functional anotations:
+KEGG: 
+
 download link will appear shortly.
 
 ### 16S rRNA sequences
 download link will appear shortly.
 
-### 16S rRNA sequences IMNGS-data
-download link will appear shortly.
 
 ## Pipelines:
 
