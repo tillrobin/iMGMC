@@ -14,7 +14,7 @@
 Please cite our paper:
 
 **An integrated metagenome catalog enables novel insights into the murine gut microbiome**  
-Till Robin Lesker, Abilash Chakravarthy, Eric. J.C. Gálvez,  John Baines, Thomas Clavel, Alexander Sczyrba, Alice McHardy, Till Strowig http://biorxiv.org/cgi/content/short/528737v1
+Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez,  John Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig http://biorxiv.org/cgi/content/short/528737v1
 
 ### External studies providing data:
 Xiao, Liang, et al. "A catalog of the mouse gut metagenome." Nature biotechnology 33.10 (2015): 1103-1108. http://doi.org/10.1038/nbt.3353
@@ -39,27 +39,15 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 [iMGMC_map_taxonomy.tar.gz (~40MB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133736&authkey=AOjPxI-kDPJEpc8)
 
 ### Functional anotations:
-KEGG: 
-
-download link will appear shortly.
+[iMGMC_map_functionality.tar.gz (~36MB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133738&authkey=APk09LufvLmUJN8)
 
 ### 16S rRNA sequences
-download link will appear shortly.
+[iMGMC-16SrRNAgenes.fasta (~2MB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133739&authkey=AAsGBvRCokrqALg)
 
 
 ## Pipelines:
 
 ![pipeline](https://github.com/tillrobin/iMGMC/blob/master/pipeline.png)
-
-### Requirements
-
-server with Linux operation system (~32Gb RAM ~10Gbyte disk space)
-
-*External tools*
-  - bbmap (for the mapping part)
-    please download and install http://sourceforge.net/projects/bbmap/
-  - samtools (process bam files from other Mapping Tool)
-    please download and install https://github.com/samtools/samtools/releases
 
 ### Genecatalog
 
