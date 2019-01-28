@@ -4,12 +4,11 @@
 
 ## Description
 
-*Creation of in new mouse gut catalog with special features:*
-  - more divers samples from different studies (12 Vendors incl. wildmice, gut locations)
-  - clustering-free approch: all-in-one assembly, keep traking of each ORF to Contig to Bin
-  - higher integration structure ORF > Contigs > Bin
-  - higher taxonomic resolution and more accurate by using contig for the annotation
-  - 16S integration by linking to Bins
+*Creation of an new mouse gut gene catalog with special features:*
+  - more diverse samples from different studies (12 Vendors incl. wild mice and various gut locations)
+  - clustering-free approach: all-in-one assembly, keeping track of each ORF to contigs to bins
+  - higher taxonomic resolution and more accuracy by using contigs for annotation
+  - 16S rRNA gene integration via linkage to bins
 
 Please cite our paper:
 
@@ -51,7 +50,7 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 
 ### Genecatalog
 
-instruction will appear shortly
+[Instruction to process your own samples with iMGMC](/genecatalog-pipeline.md)
 
 ### PICRUSt (mouse gut specific)
 
