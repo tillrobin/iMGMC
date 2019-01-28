@@ -25,7 +25,7 @@ conda create iMGMC-PICRUSt -c bioconda picrust pynast fasttree
 ```
 
 ## Workflow
-![picrust-workflow-denovo](/picrust-workflow-denovo.png)
+![picrust-workflow-denovo](/PICRUSt/picrust-workflow-denovo.png)
   
 ### Needed input files
 * BiomFile, your abundance table in biom format
