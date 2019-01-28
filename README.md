@@ -1,6 +1,6 @@
 # iMGMC - integrated Mouse Gut Metagenomic Catalog
 
-![logo](https://github.com/tillrobin/iMGMC/blob/master/logo.png)
+![logo](/images/logo.png)
 
 ## Description
 
@@ -46,16 +46,22 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 
 ## Pipelines:
 
-![pipeline](https://github.com/tillrobin/iMGMC/blob/master/pipeline.png)
+![pipeline](/images/pipeline.png)
 
 ### Genecatalog
 
-[Instruction to process your own samples with iMGMC](/genecatalog-pipeline.md)
+[Instruction to process your own WGS samples with iMGMC](/genecatalog-pipeline.md)
 
 ### PICRUSt (mouse gut specific)
 
-instruction will appear shortly
+[Instruction to process your own samples 16S rRNA amplicon samples with PICRUSt and iMGMC](/PICRUSt/README.md)
 
-### IMNGS
+### IMNGS (resource of processed 16S rRNA microbial profiles)
 
-instruction will appear shortly
+[Instruction to work with iMGMC-IMNGS data](/IMNGS.md)
+
+### Workflows to create the iMGMC Catalog
+
+[Code for assembly and binning](/creation-cataloge-pipeline.md)
+[Code for linking 16S rRNA genes to bins](/linking/README.md)
+
