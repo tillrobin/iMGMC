@@ -1,13 +1,14 @@
 # Creation of the Genecatalog
 
 ## Table of Contents
-[Description](#Description)
-[Requirements](#Requirements)
-[Data pre-processing](#Data-pre-processing)
-[Assembly](#Assembly)
-[Gene Calling](#Gene-Calling)
-[Binning](#Binning)
-[16S rRNA gene reconstruction](#RAMBL)
+
+[Description](#Description)  
+[Requirements](#Requirements)  
+[Data pre-processing](#Data-pre-processing)  
+[Assembly](#Assembly)  
+[Gene Calling](#Gene-Calling)  
+[Binning](#Binning)  
+[16S rRNA gene reconstruction](#RAMBL)  
 
 
 # Description
@@ -36,7 +37,7 @@ Very low quality should be trimmed. However we only use HiSeq sequencing reads a
 
 **3. Removel of contaminated host**
 
-We use bbmap the mouse reference genom from [Ensembl](http://www.ensembl.org/Mus_musculus/Info/Index).
+We use bbmap the mouse and the reference mouse genome from [Ensembl](http://www.ensembl.org/Mus_musculus/Info/Index).
 
     # for each Sample ($SampleName) with ReadR1 ($Fastq_R1) and ReadR2 ($Fastq_R2) we preform:
 	bbmap.sh -Xmx50g usejni=t unpigz=t threads=10 fast=t \
@@ -129,7 +130,7 @@ We use RAMBL for 16S rRNA gene reconstruction from all libraries in an all-in-on
 
 **1. Bowtie2 mapping of all libraries to GG index**
 
-Please see RAMBL instruction for details.
+Please see [RAMBL instruction](https://github.com/homopolymer/RAMBL) for details.
 
 	# for each Sample ($SampleName) with ReadR1 ($Fastq_R1) and ReadR2 ($Fastq_R2) we preform:
 	bowtie2 -p 12 --local --very-sensitive-local -x 99_otus -1 ${Fastq_R1} -2 ${Fastq_R2} -S ${SampleName}.sam
@@ -141,7 +142,7 @@ Please see RAMBL instruction for details.
 
 **3. Create bam file list and metadata file for RAMBL**
 
-Please see RAMBL instruction for details.
+Please see [RAMBL instruction](https://github.com/homopolymer/RAMBL) for details.
 
 	#bams.fofn:
 	${SampleName1}.bam
@@ -162,3 +163,6 @@ Please see RAMBL instruction for details.
 	rambl.py -R -c 30 -v data_info.txt
 
 
+## Linking of RAMBL sequences to bins:
+
+[Code for linking 16S rRNA genes to bins](/linking/README.md)
