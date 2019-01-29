@@ -16,6 +16,7 @@
 * PICRUSt 1.1.3
 * pynast
 * FastTree
+* iMGMC repository (/PICRUst/iMGMC-PICRUSt.bash)
 
 ### Bioconda
 Please use [Conda](https://conda.io/docs/install/quick.html)

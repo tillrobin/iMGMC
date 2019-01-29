@@ -13,6 +13,7 @@
 ## Data processing
 
 ![Prevalence-Abundance-IMNGS](/images/Prevalence-Abundance-IMNGS.png)
+
 Figure: Abundance versus Prevalence plot of Firmicutes (n=556), Bacteroidetes (n=168), Proteobacteria (n=33), Tenericutes (n=18), Actinobacteria (n=15) and Other (n=17) phyla of 12,019 mouse gut samples. 
 
 Please cite our paper:

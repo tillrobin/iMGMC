@@ -25,28 +25,20 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 
 ## Data:
 
-### Catalog:
-[iMGMC-GeneID.fasta.gz (~1GB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133644&authkey=AD4pwU2r1mk4FHU)
-
-### Assembly:
-[iMGMC-ConitgID.fasta.gz (~1.3GB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133647&authkey=AIM3mw3FbPE6b_M)
-
-### Mapping File (GeneID -> ContigID -> BinID)
-[iMGMC-map-Gene-Contig-Bin.tab.gz (~30MB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133646&authkey=AJM_z8-oLOlOO58)
-
-### Taxonomic anotations:
-[iMGMC_map_taxonomy.tar.gz (~40MB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133736&authkey=AOjPxI-kDPJEpc8)
-
-### Functional anotations:
-[iMGMC_map_functionality.tar.gz (~36MB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133738&authkey=APk09LufvLmUJN8)
-
-### 16S rRNA sequences
-[iMGMC-16SrRNAgenes.fasta (~2MB)](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133739&authkey=AAsGBvRCokrqALg)
-
+| Description | Size | Link |
+|--|--|--|
+| Catalog ORF sequences | 1GB | [iMGMC-GeneID.fasta.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133644&authkey=AD4pwU2r1mk4FHU) |
+| Full assembly contigs | 1.3GB | [iMGMC-ConitgID.fasta.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133647&authkey=AIM3mw3FbPE6b_M) |
+| Mapping File (GeneID->ContigID->BinID) | 30MB | [iMGMC-map-Gene-Contig-Bin.tab.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133646&authkey=AJM_z8-oLOlOO58) |
+| Taxonomic anotations | 40MB | [iMGMC_map_taxonomy.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133736&authkey=AOjPxI-kDPJEpc8) |
+| Functional anotations | 36MB | [iMGMC_map_functionality.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133738&authkey=APk09LufvLmUJN8) |
+| 16S rRNA sequences | 2MB | [iMGMC-16SrRNAgenes.fasta](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133739&authkey=AAsGBvRCokrqALg) |
 
 ## Pipelines:
 
 ![pipeline](/images/pipeline.png)
+
+We recommend the use of [Bioconda](http://bioconda.github.io/)
 
 ### Genecatalog
 
@@ -62,6 +54,7 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 
 ### Workflows to create the iMGMC Catalog
 
-[Code for assembly and binning](/creation-cataloge-pipeline.md)
+[Code for assembly, binning and 16S rRNA gene reconstruction](/creation-cataloge-pipeline.md)
+
 [Code for linking 16S rRNA genes to bins](/linking/README.md)
 
