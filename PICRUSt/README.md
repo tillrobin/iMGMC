@@ -9,7 +9,7 @@
 
 *PICRUSt with iMGMC data*
   - data form diverse mouse samples from different studies (12 Vendors incl. wild mice and various gut locations)
-  - useing MAGS to 16S rRNA gene linkage
+  - using MAGS to 16S rRNA gene linkage
 
 ## Requirements
 

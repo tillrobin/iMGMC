@@ -3,10 +3,10 @@
 ## Table of Contents  
 [Description](#Description)  
 [Requirements](#Requirements)  
-[Blast-search](#Blast-search)   
-[Split-Mapping](#Split-Mapping)   
-[Correlation](#Correlation)   
-[Integration](#Integration)  
+[Blast-search](#Blast-search)  
+[Split-Mapping](#Split-Mapping)  
+[Correlation](#Correlation)  
+[Integration](#Integration)  
 
 # Description
 
@@ -14,9 +14,9 @@
 
 # Requirements
 
-* NCBI Blast
-* bbmap
-* R
+* [NCBI Blast](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+* [BBmap](https://sourceforge.net/projects/bbmap/)
+* [R](https://cran.r-project.org)
 
 # Blast-search
 
@@ -24,7 +24,7 @@
 
 	makeblastdb -type nucl -in RAMBL-16SrRNAsequences.fasta
 
-**2. Run Blast for all bins ($BinFastaFile) **
+**2. Run Blast for all bins ($BinFastaFile)**
 
 	blastn \
 	-query $BinFastaFile \
@@ -35,7 +35,7 @@
 	-num_threads 20 \
 	-out blastn-bins_Finals-full-nr99.50-hits-fasta.outfmt6
 	
-**3. Filter Blast results and create blast-summary-file **
+**3. Filter Blast results and create blast-summary-file**
 
 * min ident 97%
 * min coverage 100bp
@@ -58,14 +58,14 @@ under construction
 	in2=${SampleName}_R2_rmhost.fastq.gz \
 	basename=./splited-read-${SampleName}/out_%.fastq.gz
 
-**2. Map all mapped reads of a bin to all 16S rRNA sequences from RAMBL**
+**3. Map all mapped reads of a bin to all 16S rRNA sequences from RAMBL**
 
     mkdir statsfiles-unpaired-all scafstats-statsfiles-unpaired-all \
 	cov-statsfiles-unpaired-all rpkm-statsfiles-unpaired-all
 	# for each bin ($BinNr) we preform:
-	cat ./splited-read-*/out_bin_${BinNr}.fastq.gz | \
+	zcat ./splited-read-*/out_bin_${BinNr}.fastq.gz | \
 	bbmap.sh local=t -Xmx30g unpigz=t threads=${usedCores} minid=0.90 \
-	ref=RAMBL-16sRNAsequences.fasta \
+	ref=RAMBL-16sRNAsequences.fasta nodisk \
 	interleaved=false \
 	statsfile=./statsfiles-unpaired-all/${BinNr}.statsfile \
 	scafstats=./scafstats-statsfiles-unpaired-all/${BinNr}.scafstats \
@@ -80,7 +80,48 @@ under construction
 
 # Correlation
 
-under construction
+**1. Create 16S rRNA gene abundances over all samples**
+
+    # for each Sample ($SampleName) with ReadR1 ($Fastq_R1) and ReadR2 ($Fastq_R2) we preform:
+    bbmap.sh -Xmx30g unpigz=t threads=${usedCores} minid=0.90 \
+    ref=RAMBL-16sRNAsequences.fasta nodisk \
+    statsfile=16SrRNA-statsfiles/${SampleName}.statsfile \
+    scafstats=16SrRNA-scafstats-statsfiles/${SampleName}.scafstats \
+    covstats=16SrRNA-cov-statsfiles/${SampleName}.covstat \
+    rpkm=16SrRNA-rpkm-statsfiles/${SampleName}.rpkm \
+    sortscafs=f nzo=f ambiguous=all local=t \
+	in=${SampleName}_R1_rmhost.fastq.gz \
+	in2=${SampleName}_R2_rmhost.fastq.gz
+
+**2. Create bin abundances over all samples**
+
+    # create conducted bin-fasta file from all bins in ${Folder-of-all-bins}
+	mkdir bin-abundances
+	cd bin-abundances
+	for bin-file in ${Folder-of-all-bins}
+	do
+	BinFileName=${bin-file##*/}
+	echo ">${BinFileName%.*}" >> bin-sequences.fasta
+	fgrep -v ">" $bin-file >> bin-sequences.fasta
+	done
+	
+	# create ref for bbmap
+	bbmap.sh ref=bin-sequences.fasta
+	
+	# for each Sample ($SampleName) with ReadR1 ($Fastq_R1) and ReadR2 ($Fastq_R2) we preform:
+	statsfile=bin-statsfiles/${SampleName}.statsfile \
+    scafstats=bin-scafstats-statsfiles/${SampleName}.scafstats \
+    covstats=bin-cov-statsfiles/${SampleName}.covstat \
+    rpkm=bin-rpkm-statsfiles/${SampleName}.rpkm \
+    sortscafs=f nzo=f ambiguous=all local=t \
+	in=${SampleName}_R1_rmhost.fastq.gz \
+	in2=${SampleName}_R2_rmhost.fastq.gz
+
+
+**3. Summerize statistics**
+
+under construction	
+
 
 # Integration
 
