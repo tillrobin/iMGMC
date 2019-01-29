@@ -127,16 +127,16 @@ under construction
 
 **Needed files:**
 
-* Bins-TPMbyLibrary.txt
-* MetaData.csv
-* forCor-16S-unambignousMappedReadsbyLibrary.txt
-* forCor-16S-ambignousMappedReadsbyLibrary.txt
-* blast-matrix.txt
+* Bins-TPMbyLibrary.txt  
+* MetaData.csv  
+* forCor-16S-unambignousMappedReadsbyLibrary.txt  
+* forCor-16S-ambignousMappedReadsbyLibrary.txt  
+* blast-matrix.txt  
 
-	Rscript workflow_management_16S_meta_int.R \
-	forCor-Bins-TPMbyLibrary.txt \
-	MetaData.csv \
-	forCor-16S-unambignousMappedReadsbyLibrary.txt \
-	forCor-16S-ambignousMappedReadsbyLibrary.txt \
-	blast-matrix.txt \
-	${PWD}
+    Rscript workflow_management_16S_meta_int.R \
+    forCor-Bins-TPMbyLibrary.txt \
+    MetaData.csv \
+    forCor-16S-unambignousMappedReadsbyLibrary.txt \
+    forCor-16S-ambignousMappedReadsbyLibrary.txt \
+    blast-matrix.txt \
+    ${PWD}
