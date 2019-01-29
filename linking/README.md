@@ -14,7 +14,7 @@
 
 # Requirements
 
-* [NCBI Blast](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+* [NCBI Blast](http://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
 * [BBmap](https://sourceforge.net/projects/bbmap/)
 * [R](https://cran.r-project.org)
 
@@ -113,7 +113,7 @@ under construction
     scafstats=bin-scafstats-statsfiles/${SampleName}.scafstats \
     covstats=bin-cov-statsfiles/${SampleName}.covstat \
     rpkm=bin-rpkm-statsfiles/${SampleName}.rpkm \
-    sortscafs=f nzo=f ambiguous=all local=t \
+    sortscafs=f nzo=f ambiguous=all \
 	in=${SampleName}_R1_rmhost.fastq.gz \
 	in2=${SampleName}_R2_rmhost.fastq.gz
 
@@ -125,4 +125,18 @@ under construction
 
 # Integration
 
-under construction
+**Needed files:**
+
+* Bins-TPMbyLibrary.txt
+* MetaData.csv
+* forCor-16S-unambignousMappedReadsbyLibrary.txt
+* forCor-16S-ambignousMappedReadsbyLibrary.txt
+* blast-matrix.txt
+
+	Rscript workflow_management_16S_meta_int.R \
+	forCor-Bins-TPMbyLibrary.txt \
+	MetaData.csv \
+	forCor-16S-unambignousMappedReadsbyLibrary.txt \
+	forCor-16S-ambignousMappedReadsbyLibrary.txt \
+	blast-matrix.txt \
+	${PWD}
