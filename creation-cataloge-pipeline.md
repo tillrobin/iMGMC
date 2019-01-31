@@ -1,4 +1,4 @@
-# Creation of the Genecatalog
+# Creation of the gene catalog
 
 ## Table of Contents
 
@@ -27,15 +27,15 @@
 
 # Data-pre-processing
 
-**1. Demultiplexing and adaptor removing**
+**1. Demultiplexing and adapter removing**
 
-All reads were processed with Ilumina bcl2fastq Conversion
+All reads were processed with Illumina bcl2fastq Conversion
 
 **2. Quality check of the reads**
 
 Very low quality should be trimmed. However we only use HiSeq sequencing reads and do not preform quality trimming or any kind of error correction.
 
-**3. Removel of contaminated host**
+**3. Removal of contaminated host**
 
 We use bbmap the mouse and the reference mouse genome from [Ensembl](http://www.ensembl.org/Mus_musculus/Info/Index).
 
@@ -70,7 +70,7 @@ All reads were used for an all-in-one assembly with Megahit on a SGI UV-2000
 
 # Gene-Calling
 
-**1. Sorting and removel for short contigs bbmap-tools**
+**1. Sorting and removal for short contigs bbmap-tools**
 
     dedupe.sh sort=d in=${MegaHIT-contigs} out=stdout.fasta minscaf=1000 | \
 	rename.sh in=stdin.fasta out=MegaHIT-sort-rename_contigs.fasta prefix="contig"

@@ -40,7 +40,7 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 
 We recommend the use of [Bioconda](http://bioconda.github.io/)
 
-### Genecatalog (mapping pipeline)
+### Use of the gene catalog (mapping pipeline)
 
 [Instruction to process your own WGS samples with iMGMC](/genecatalog-pipeline.md)
 

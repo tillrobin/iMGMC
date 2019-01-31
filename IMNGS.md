@@ -4,7 +4,7 @@
 
 ## Description
 
-1323 reconstructed full-lenghts 16S sequences were processed via the IMNGS analysis pipeline for its prevalence and abundance in 168,573 SRA samples (November 2017).
+1323 reconstructed full-lengths 16S sequences were processed via the IMNGS analysis pipeline for its prevalence and abundance in 168,573 SRA samples (November 2017).
 
 ## Data
 
@@ -16,7 +16,7 @@
 
 Figure: Abundance versus Prevalence plot of Firmicutes (n=556), Bacteroidetes (n=168), Proteobacteria (n=33), Tenericutes (n=18), Actinobacteria (n=15) and Other (n=17) phyla of 12,019 mouse gut samples. 
 
-Please cite our paper:
+Please see our papers for more details:
 
 **An integrated metagenome catalog enables novel insights into the murine gut microbiome**  
 Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez,  John Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig

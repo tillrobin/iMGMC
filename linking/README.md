@@ -74,7 +74,7 @@ under construction
 	sortscafs=f nzo=f ambiguous=all \
 	in=stdin.fastq
 
-**3. Summerize statistics**
+**3. Summarize statistics**
 
 under construction
 
@@ -118,7 +118,7 @@ under construction
 	in2=${SampleName}_R2_rmhost.fastq.gz
 
 
-**3. Summerize statistics**
+**3. Summarize statistics**
 
 under construction	
 
