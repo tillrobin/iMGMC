@@ -10,8 +10,6 @@
 [TPM-normalization](#TPM-normalization)  
 [Basic-statistics](#Basic-statistics)  
 
-
-
 # Description
 
 ![iMGMC-pipeline](/images/pipeline.png)
@@ -20,9 +18,11 @@
 * [BBmap](https://sourceforge.net/projects/bbmap/)
 * [samtools](http://samtools.sourceforge.net/)
 * [sambamba](http://lomereiter.github.io/sambamba/)
+* iMGMC repository
 
-# please export PATH of github clone to you PATH variable
-
+**please export PATH of github clone to you PATH variable:**  
+    git clone https://github.com/tillrobin/iMGMC)  
+	PATH=${PWD}/iMGCM/scripts/:${PWD}/iMGCM/PICRUSt:${PATH  }
 
 # Data-pre-processing
 

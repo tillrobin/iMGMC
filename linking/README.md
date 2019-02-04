@@ -40,7 +40,9 @@
 * min ident 97%
 * min coverage 100bp
 
-under construction
+	cat blastn-bins_Finals-full-nr99.50-hits-fasta.outfmt6 | \
+	awk '$3 > 97' | awk '$4 > 100' | cut -f1,2,12 > filtered-BlastOut.tab
+
 
 # Split-Mapping
 
@@ -76,7 +78,7 @@ under construction
 
 **3. Summarize statistics**
 
-under construction
+under construction	
 
 # Correlation
 
@@ -120,7 +122,15 @@ under construction
 
 **3. Summarize statistics**
 
-under construction	
+You need to normalize you samples counts for a comparison. Here we use TPM-normalization to create TPM-${SampleID}.txt form ${SampleName}.covstat :
+
+    makeTPMfromCovStats.sh ${SampleName}.covstat
+
+Create matrix file
+
+    #under construction
+
+
 
 
 # Integration
@@ -133,7 +143,7 @@ under construction
 * forCor-16S-ambignousMappedReadsbyLibrary.txt  
 * blast-matrix.txt  
 
-	
+
     Rscript workflow_management_16S_meta_int.R \
     forCor-Bins-TPMbyLibrary.txt \
     MetaData.csv \
@@ -141,7 +151,4 @@ under construction
     forCor-16S-ambignousMappedReadsbyLibrary.txt \
     blast-matrix.txt \
     ${PWD}
-	
-	
-
 
