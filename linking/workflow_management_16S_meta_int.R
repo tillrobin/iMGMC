@@ -14,7 +14,7 @@ res_folder=as.character(args1[6])
 dir.create(Sys.getenv("R_LIBS_USER"), showWarnings = FALSE, recursive = TRUE)
 
 
-Sys.setenv(http_proxy="RZproxy.helmholtz-hzi.de:3128")
+Sys.setenv(http_proxy="")
     packages=c("RcppArmadillo","Rcpp","RCurl","plyr","ggplot2","zoo","grid","gridExtra","XML","stringr","checkmate","base64enc","colorspace","scales","scatterplot3d","digest","stringi","utils","setInternet2")
   
   if(length(setdiff(packages,rownames(installed.packages())))>0)
@@ -41,7 +41,7 @@ print(S16_file_name)
   
   bins_raw_mat=bins_raw[,-1]
   rownames(bins_raw_mat)=as.character(bins_raw$X.name)
-  rownames(bins_raw_mat)=str_replace_all(string = rownames(bins_raw_mat),pattern = "verysensitive-B100pB20.",replacement = "")
+  rownames(bins_raw_mat)=str_replace_all(string = rownames(bins_raw_mat),pattern = "bin_",replacement = "")
   bins_raw_mat=as.matrix(bins_raw_mat)
   
   bins_metadata_mat=bins_metadata[,-1]

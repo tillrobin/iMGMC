@@ -40,9 +40,21 @@
 * min ident 97%
 * min coverage 100bp
 
-	cat blastn-bins_Finals-full-nr99.50-hits-fasta.outfmt6 | \
-	awk '$3 > 97' | awk '$4 > 100' | cut -f1,2,12 > filtered-BlastOut.tab
 
+    cat blastn-bins_Finals-full-nr99.50-hits-fasta.outfmt6 | \
+    awk '$3 > 97' | awk '$4 > 100' | cut -f1,2,12 > filtered-BlastOut.tab
+
+**4. Create Blast results matrix**
+
+Needed Input files:
+* list for all 16SrRNA names in text-format
+* list for all bin names in text-format
+* filtered-BlastOut.tab
+
+
+    reformat-blast-results.sh filtered-BlastOut.tab 16SrRNAnames.txt BinNames.txt
+    
+    #final output: "matrix-Blast.tab"
 
 # Split-Mapping
 
@@ -78,7 +90,11 @@
 
 **3. Summarize statistics**
 
-under construction	
+    # run the script in the same directory
+	# it use the dir "statsfiles-unpaired-all"
+    make-splitmapping-stats.sh
+	
+	#final output: "final-unambiguousReads.tab"
 
 # Correlation
 
@@ -95,7 +111,15 @@ under construction
 	in=${SampleName}_R1_rmhost.fastq.gz \
 	in2=${SampleName}_R2_rmhost.fastq.gz
 
-**2. Create bin abundances over all samples**
+**2. Summarize statistics and create matrix file for 16S rRNA abundances**
+
+    # run the script in the same directory
+	# it use the dir "scafstats-statsfiles"
+	make-16S-mapping-stats.sh
+	
+	#final output: "16S-abundances.tab"
+
+**3. Create bin abundances over all samples**
 
     # create conducted bin-fasta file from all bins in ${Folder-of-all-bins}
 	mkdir bin-abundances
@@ -120,35 +144,45 @@ under construction
 	in2=${SampleName}_R2_rmhost.fastq.gz
 
 
-**3. Summarize statistics**
+**4. Summarize statistics and create matrix file for bin abundances**
 
-You need to normalize you samples counts for a comparison. Here we use TPM-normalization to create TPM-${SampleID}.txt form ${SampleName}.covstat :
-
-    makeTPMfromCovStats.sh ${SampleName}.covstat
-
-Create matrix file
-
-    #under construction
-
-
+    # run the script in the same directory
+	# it use the dir "ref-statsfiles"
+    make-bin-mapping-stats.sh
+	
+	#final output: "bin-abundances.tab"
 
 
 # Integration
 
 **Needed files:**
 
-* Bins-TPMbyLibrary.txt  
-* MetaData.csv  
-* forCor-16S-unambignousMappedReadsbyLibrary.txt  
-* forCor-16S-ambignousMappedReadsbyLibrary.txt  
-* blast-matrix.txt  
+* matrix-Blast.tab
+* bin-abundances.tab
+* 16S-abundances.tab
+* final-unambiguousReads.tab
+* BinMetaData.csv ("BinID"<tab>"genome size bp")
+
+**Create bin metadata file**
+
+
+    echo -e "BinID\tgenome size bp" > BinMetaData.csv
+	for bin-file in ${Folder-of-all-bins}
+	do
+	BinFileName=${bin-file##*/}
+	BinName=${BinFileName%%.*}
+	fgrep -v ">" $bin-file | wc -m | sed -e "s/^/${BinName}\t/" >> BinMetaData.csv
+	done
+
+
+**Run Integration pipeline in R**
 
 
     Rscript workflow_management_16S_meta_int.R \
-    forCor-Bins-TPMbyLibrary.txt \
-    MetaData.csv \
-    forCor-16S-unambignousMappedReadsbyLibrary.txt \
-    forCor-16S-ambignousMappedReadsbyLibrary.txt \
+    bin-abundances.tab \
+    BinMetaData.csv \
+    16S-abundances.tab \
+	final-unambiguousReads.tab \
     blast-matrix.txt \
     ${PWD}
 

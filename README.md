@@ -33,6 +33,7 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 | Taxonomic annotations | 40MB | [iMGMC_map_taxonomy.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133736&authkey=AOjPxI-kDPJEpc8) |
 | Functional annotations | 36MB | [iMGMC_map_functionality.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133738&authkey=APk09LufvLmUJN8) |
 | 16S rRNA sequences | 2MB | [iMGMC-16SrRNAgenes.fasta](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133739&authkey=AAsGBvRCokrqALg) |
+| MAGs | 0.5GB | [iMGMC_MAGs.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2134225&authkey=ABA7bpleGh606kI) |
 
 ## Pipelines:
 
