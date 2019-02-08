@@ -35,11 +35,8 @@
 	-num_threads 20 \
 	-out blastn-bins_Finals-full-nr99.50-hits-fasta.outfmt6
 	
-**3. Filter Blast results and create blast-summary-file**
 
-* min ident 97%
-* min coverage 100bp
-
+**3. Filter Blast results (min ident 97% and min coverage 100bp)**
 
     cat blastn-bins_Finals-full-nr99.50-hits-fasta.outfmt6 | \
     awk '$3 > 97' | awk '$4 > 100' | cut -f1,2,12 > filtered-BlastOut.tab
