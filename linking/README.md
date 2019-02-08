@@ -44,10 +44,12 @@
 **4. Create Blast results matrix**
 
 Needed Input files:
-* list for all 16SrRNA names in text-format
-* list for all bin names in text-format
 * filtered-BlastOut.tab
+* list for all 16SrRNA names in text-format: "16SrRNAnames.txt"
+* list for all bin names in text-format: "BinNames.txt"
 
+
+Run reformat script (iMGMC/linking/reformat-blast-results.sh)
 
     reformat-blast-results.sh filtered-BlastOut.tab 16SrRNAnames.txt BinNames.txt
     
