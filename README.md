@@ -9,11 +9,12 @@
   - clustering-free approach: all-in-one assembly, keeping track of each ORF to contigs to bins
   - higher taxonomic resolution and more accuracy by using contigs for annotation
   - 16S rRNA gene integration via linkage to bins
+  - expansion by MAGs from sample-wise assembly of 890 samples
 
 Please cite our paper:
 
 **An integrated metagenome catalog enables novel insights into the murine gut microbiome**  
-Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez,  John Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig http://biorxiv.org/cgi/content/short/528737v1
+Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez, Ilias Lagkouvardos, John F. Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig http://biorxiv.org/cgi/content/short/528737v1
 
 ### External studies providing data:
 Xiao, Liang, et al. "A catalog of the mouse gut metagenome." Nature biotechnology 33.10 (2015): 1103-1108. http://doi.org/10.1038/nbt.3353
@@ -33,11 +34,12 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 | Taxonomic annotations | 40MB | [iMGMC_map_taxonomy.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133736&authkey=AOjPxI-kDPJEpc8) |
 | Functional annotations | 36MB | [iMGMC_map_functionality.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133738&authkey=APk09LufvLmUJN8) |
 | 16S rRNA sequences | 2MB | [iMGMC-16SrRNAgenes.fasta](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133739&authkey=AAsGBvRCokrqALg) |
-| MAGs | 0.5GB | [iMGMC_MAGs.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2134225&authkey=ABA7bpleGh606kI) |
-| sMAGs | X GB | pending | 
+| integrated MAGs | 0.5GB | [iMGMC_MAGs.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2134225&authkey=ABA7bpleGh606kI) |
+| single MAGs | X GB | pending | 
+| extra MAGs | X GB | pending | 
 
 Accession codes of the used gut metagenome sequences:
-European Nucleotide Archive: ERP008710, ERA473426, (pending) and to the Metagenomics Rapid Genomes/Metagenomes (MG-RAST) with ID 4661127.3 , mgp5130.
+European Nucleotide Archive: [ERP008710](https://www.ebi.ac.uk/ena/data/view/ERP008710), [ERA473426](https://www.ebi.ac.uk/ena/data/view/ERA473426), (pending) and to the Metagenomics Rapid Genomes/Metagenomes (MG-RAST) with ID 4661127.3/ [mgp5130](https://www.mg-rast.org/linkin.cgi?project=mgp5130) and (pending)
 
 
 ## Pipelines:
