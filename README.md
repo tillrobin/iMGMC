@@ -35,8 +35,8 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 | Functional annotations | 36MB | [iMGMC_map_functionality.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133738&authkey=APk09LufvLmUJN8) |
 | 16S rRNA sequences | 2MB | [iMGMC-16SrRNAgenes.fasta](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133739&authkey=AAsGBvRCokrqALg) |
 | integrated MAGs | 0.5GB | [iMGMC_MAGs.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2134225&authkey=ABA7bpleGh606kI) |
-| single-wise MAGs | X GB | pending | 
-
+| representave mMAGs (n=1296) | 1 GB | [iMGMC-mMAGs-dereplicated_genomes.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137126&authkey=ADFYgL1YRjtb-Vo) | 
+| all mMAGs (n=20,927) | 15 GB | [iMGMC-mMAGs.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137128&authkey=AFxAhkbg1uYWzhY) | 
 
 Accession codes of the used gut metagenome sequences:
 European Nucleotide Archive: [ERP008710](https://www.ebi.ac.uk/ena/data/view/ERP008710), [ERA473426](https://www.ebi.ac.uk/ena/data/view/ERA473426), [PRJEB32890](https://www.ebi.ac.uk/ena/data/view/PRJEB32890) and to the Metagenomics Rapid Genomes/Metagenomes (MG-RAST) with ID 4661127.3/ [mgp5130](https://www.mg-rast.org/linkin.cgi?project=mgp5130)
