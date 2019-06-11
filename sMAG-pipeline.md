@@ -21,11 +21,12 @@
 * [metaBAT2](https://bitbucket.org/berkeleylab/metabat)
 * [CheckM](https://ecogenomics.github.io/CheckM/)
 
+Install tools via bioconda:
 
-    conda install bbmap spades megahit bwa sambamba metabat2
+	conda install bbmap spades megahit bwa sambamba metabat2
 	# built own environment for CheckM, please download database after the installation
 	conda create -n checkm checkm-genome
-	
+
 
 # Assembly
 
