@@ -11,7 +11,7 @@
   - 16S rRNA gene integration via linkage to bins
   - expansion by 20,927 MAGs from sample-wise assembly of 871 mouse gut metagenomic samples, representing 1,296 species
 
-Please cite our paper:
+See our paper for details:
 
 **An integrated metagenome catalog enables novel insights into the murine gut microbiome**  
 Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez, Ilias Lagkouvardos, John F. Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig http://biorxiv.org/cgi/content/short/528737v1
@@ -68,4 +68,9 @@ We recommend the use of [Bioconda](http://bioconda.github.io/)
 [Code for assembly, binning and 16S rRNA gene reconstruction](/creation-cataloge-pipeline.md)
 
 [Code for linking 16S rRNA genes to bins](/linking/README.md)
+
+### Workflows to create the iMGMC Catalog
+
+[Code for generation and clustering of single-wise assembly MAGs](/sMAG-pipeline.md)
+
 
