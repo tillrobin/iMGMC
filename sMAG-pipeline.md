@@ -69,7 +69,45 @@ We use bbmap and bwa to create bam-file for binning:
 	-t 32 --pplacer_threads 10 -x fa . \
 	./checkM-out-single
 
-	
+# Dereplication
+
+Create first a checkM-data.txt including all CheckM information of all MAGs you want to cluster:
+
+	genome,completeness,contamination,strain_heterogeneity
+	iMGMC-100.fa,97.07,1.27,1.27
+	iMGMC-1000.fa,58.9,0.67,0.67
+	iMGMC-1001.fa,79.84,0.23,0.23
+	[...]
+
+
+	# activate dRep environment
+	# run for mMAGs
+	conda activate dRep
+	dRep dereplicate drep-outout-SkipSecondary-ANI95-c50c10 \
+	--genomeInfo checkM-data.txt \
+	-comp 50 -con 10 \
+	--P_ani 0.95 --SkipSecondary -p 32 \
+	-g all5010/*.fa
+
+
+	# run for hqMAGs
+	conda activate dRep
+	dRep dereplicate drep-outout-SkipSecondary-ANI95-c50c10 \
+	--genomeInfo checkM-data.txt \
+	-comp 90 -con 5 \
+	--P_ani 0.95 --SkipSecondary -p 32 \
+	-g all5010/*.fa
+
+
+	# default mMAGs (comp >= 50, con < 10) run without secondary clustering
+	# Minumum genome completeness (default: 75)
+	conda activate dRep
+	dRep dereplicate drep-outout-SkipSecondary-ANI95-c50c10 \
+	--genomeInfo checkM-data.txt \
+	--P_ani 0.95 --SkipSecondary -p 32 \
+	-g all5010/*.fa
+
+
 ## Pipeline to create integrated MAGs:
 	
 [Code for assembly, binning and 16S rRNA gene reconstruction](/creation-cataloge-pipeline.md)
