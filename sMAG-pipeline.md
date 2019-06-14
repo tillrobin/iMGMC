@@ -7,6 +7,8 @@
 [Assembly](#Assembly)  
 [Binning](#Binning)  
 [Quality-Estimation](#CheckM)  
+[Dereplication](#Dereplication)  
+
 
 # Description
 
@@ -20,12 +22,15 @@
 * [sambamba](http://lomereiter.github.io/sambamba/)
 * [metaBAT2](https://bitbucket.org/berkeleylab/metabat)
 * [CheckM](https://ecogenomics.github.io/CheckM/)
+* [dRep](https://github.com/MrOlm/drep/)
 
 Install tools via bioconda:
 
 	conda install bbmap spades megahit bwa sambamba metabat2
 	# built own environment for CheckM, please download database after the installation
 	conda create -n checkm checkm-genome
+	# built own environment for dRep
+	conda create -n drep drep
 
 
 # Assembly
@@ -79,6 +84,7 @@ Create first a checkM-data.txt including all CheckM information of all MAGs you 
 	iMGMC-1001.fa,79.84,0.23,0.23
 	[...]
 
+Run dRep with different settings using all mMAGs (comp >= 50, con < 10)
 
 	# activate dRep environment
 	# run for mMAGs
@@ -99,7 +105,7 @@ Create first a checkM-data.txt including all CheckM information of all MAGs you 
 	-g all5010/*.fa
 
 
-	# default mMAGs (comp >= 50, con < 10) run without secondary clustering
+	# default run without secondary clustering
 	# Minumum genome completeness (default: 75)
 	conda activate dRep
 	dRep dereplicate drep-outout-SkipSecondary-ANI95-c50c10 \
