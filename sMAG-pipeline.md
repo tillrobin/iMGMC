@@ -84,7 +84,7 @@ Create first a checkM-data.txt including all CheckM information of all MAGs you 
 	iMGMC-1001.fa,79.84,0.23,0.23
 	[...]
 
-Run dRep with different settings using all mMAGs (comp >= 50, con < 10)
+Run dRep with different settings using all mMAGs (comp >= 50, con < 10) located in the folder "all5010"
 
 	# activate dRep environment
 	# run for mMAGs
