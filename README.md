@@ -69,8 +69,10 @@ We recommend the use of [Bioconda](http://bioconda.github.io/)
 
 [Code for linking 16S rRNA genes to bins](/linking/README.md)
 
-### Workflows to create the iMGMC Catalog
+### Workflows to create by sample MAGs (single wise)
 
-[Code for generation and clustering of single-wise assembly MAGs](/sMAG-pipeline.md)
+[Code for the generation and clustering of single-wise assembly MAGs](/sMAG-pipeline.md)
+
+[Code for the evaluation of single-wise assembly MAGs versus all-in-one assembly MAGs](/evaluation/README.md)
 
 
