@@ -11,7 +11,7 @@ Different assembly evaluation metrics by QUAST5 using highly-related NCBI RefSeq
 
 
 |Accession|Oranism Name|
-|--|--|--|
+|--|--|
 |GCF_000007905.1|[Helicobacter hepaticus ATCC 51449](https://tillrobin.github.io/iMGMC/quastreports/GCF_000007905.1-report.html)|
 |GCF_000020225.1|[Akkermansia muciniphila ATCC BAA-835](https://tillrobin.github.io/iMGMC/quastreports/GCF_000020225.1-report.html)|
 |GCF_000143205.1|[Lactococcus lactis subsp. cremoris NZ9000](https://tillrobin.github.io/iMGMC/quastreports/GCF_000143205.1-report.html)|
