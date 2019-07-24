@@ -51,9 +51,11 @@ European Nucleotide Archive: [ERP008710](https://www.ebi.ac.uk/ena/data/view/ERP
 
 We recommend the use of [Bioconda](http://bioconda.github.io/)
 
-### Use of the gene catalog (mapping pipeline)
+### Use of the gene catalog (mapping pipeline using the catalog or MAGs)
 
 [Instruction to process your own WGS samples with iMGMC](/genecatalog-pipeline.md)
+
+[Using MAGs with iMGMC/sMAGS with your own WGS samples ](/MAG-pipeline.md)
 
 ### PICRUSt (mouse gut specific)
 
@@ -75,4 +77,12 @@ We recommend the use of [Bioconda](http://bioconda.github.io/)
 
 [Code for the evaluation of single-wise assembly MAGs versus all-in-one assembly MAGs](/evaluation/README.md)
 
+
+
+Please open an issue if the problem cannot be solved. We will need to know how to reproduce your problem.
+
+Acknowledgements:
+TS was funded by the Helmholtz Association (VH-NG-933), by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation, STR-1343/1 and STR-1343/2) and the European Union (StG337251).
+JFB was funded by the DFG under Germany`s Excellence Strategy – EXC 22167-390884018 and by the DFG Collaborative Research Center (CRC) 1182 “Origin and Function of Metaorganisms”. 
+TC received funding from the DFG (project CL481/2-1 and grants within Collaborative Research Center 1382).
 
