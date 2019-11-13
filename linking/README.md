@@ -123,17 +123,18 @@ Run reformat script (iMGMC/linking/reformat-blast-results.sh)
     # create conducted bin-fasta file from all bins in ${Folder-of-all-bins}
 	mkdir bin-abundances
 	cd bin-abundances
-	for bin-file in ${Folder-of-all-bins}
+	for binfile in ${Folder-of-all-bins}
 	do
-	BinFileName=${bin-file##*/}
+	BinFileName=${binfile##*/}
 	echo ">${BinFileName%.*}" >> bin-sequences.fasta
-	fgrep -v ">" $bin-file >> bin-sequences.fasta
+	fgrep -v ">" $binfile >> bin-sequences.fasta
 	done
 	
 	# create ref for bbmap
 	bbmap.sh ref=bin-sequences.fasta
 	
 	# for each Sample ($SampleName) with ReadR1 ($Fastq_R1) and ReadR2 ($Fastq_R2) we preform:
+	bbmap.sh -Xmx30g unpigz=t threads=${usedCores} minid=0.90 \
 	statsfile=bin-statsfiles/${SampleName}.statsfile \
     scafstats=bin-scafstats-statsfiles/${SampleName}.scafstats \
     covstats=bin-cov-statsfiles/${SampleName}.covstat \

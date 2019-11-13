@@ -1,18 +1,18 @@
-cd ref-statsfiles
+cd bin-scafstats-statsfiles
 
 
-for i in *.statsfile
+for i in *.scafstats
 do
 echo $i
-echo "Sample${i%.statsfile}" > ${i%.statsfile}.tmp
-tail -n+2 $i | cut -f6 >> ${i%.statsfile}.tmp
+echo "Sample${i%.scafstats}" > ${i%.scafstats}.tmp
+tail -n+2 $i | cut -f6 >> ${i%.scafstats}.tmp
 done
 
 
 
 
 
-for i in *.statsfile
+for i in *.scafstats
 do
 echo $i
 echo "Sample" > 00000.tmp
