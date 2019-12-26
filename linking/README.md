@@ -7,6 +7,7 @@
 [Split-Mapping](#Split-Mapping)  
 [Correlation](#Correlation)  
 [Integration](#Integration)  
+[Evaluation](#Evaluation)  
 
 # Description
 
@@ -186,3 +187,6 @@ Run reformat script (iMGMC/linking/reformat-blast-results.sh)
     blast-matrix.txt \
     ${PWD}
 
+# Evaluation
+
+[Evaluation with simulated data](/evaluation.md)
