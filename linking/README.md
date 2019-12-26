@@ -189,4 +189,4 @@ Run reformat script (iMGMC/linking/reformat-blast-results.sh)
 
 # Evaluation
 
-[Evaluation with simulated data](/evaluation.md)
+[Evaluation with simulated data](https://github.com/tillrobin/iMGMC/blob/master/linking/evaluation.md)
