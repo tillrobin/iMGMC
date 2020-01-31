@@ -30,6 +30,8 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 
 Please download the files by using the links in the table or use script provided here: [download all iMGMC data](/download.md)
 
+Alternative download provider: https://zenodo.org/record/3631711
+
 | Description | Size | Link |
 |--|--|--|
 | Catalog ORF sequences | 1 GB | [iMGMC-GeneID.fasta.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133644&authkey=AD4pwU2r1mk4FHU) |
