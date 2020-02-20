@@ -11,7 +11,7 @@
   - 16S rRNA gene integration via linkage to bins
   - expansion by 20,927 MAGs from sample-wise assembly of 871 mouse gut metagenomic samples, representing 1,296 species
 
-See our paper for details:
+See our paper for details. Will be updated soon, please use pre-print version:
 
 **An integrated metagenome catalog enables novel insights into the murine gut microbiome**  
 Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez, Ilias Lagkouvardos, John F. Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig http://biorxiv.org/cgi/content/short/528737v1
@@ -28,9 +28,7 @@ Lagkouvardos, Ilias, et al. "The Mouse Intestinal Bacterial Collection (miBC) pr
 
 ### Genecatalog:
 
-Please download the files by using the links in the table or use script provided here: [download all iMGMC data](/download.md)
-
-Alternative download provider: https://zenodo.org/record/3631711
+Please download the files by using the links in the table, use script provided here: [download all iMGMC data](/download.md) or use alternative download at [Zenodo](https://zenodo.org/record/3631711).
 
 | Description | Size | Link |
 |--|--|--|
@@ -46,11 +44,13 @@ Alternative download provider: https://zenodo.org/record/3631711
 | Description | Size | Link |
 |--|--|--|
 | integrated MAGs | 0.5 GB | [iMGMC_MAGs.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2134225&authkey=ABA7bpleGh606kI) |
-| representave mMAGs (n=1296) | 1 GB | [iMGMC-mMAGs-dereplicated_genomes.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137126&authkey=ADFYgL1YRjtb-Vo) | 
-| representave hqMAGs (n=830) | 0.7 GB | [iMGMC-hqMAGs-dereplicated_genomes.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137129&authkey=AFbfuXtd4Cm9kHQ) | 
+| representative mMAGs (n=1296) | 1 GB | [iMGMC-mMAGs-dereplicated_genomes.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137126&authkey=ADFYgL1YRjtb-Vo) | 
+| representative hqMAGs (n=830) | 0.7 GB | [iMGMC-hqMAGs-dereplicated_genomes.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137129&authkey=AFbfuXtd4Cm9kHQ) | 
 | all mMAGs (n=20,927) | 15 GB | [iMGMC-mMAGs.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137128&authkey=AFxAhkbg1uYWzhY) | 
 | Annotations by CheckM, dRep-Clustering, GTDB-Tk | 2 MB | [MAG-annotation_CheckM_dRep_GTDB-Tk.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137698&authkey=AL9RrHT7_3oj2vI) |
 | Functional annotations (hqMAGs by eggNOG mapper v2) | 187 MB | [hqMAGs.emapper.annotations.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137699&authkey=AJXI4bt0kzwDJtw) |
+
+For species abundance determination you can use [CoverM](https://github.com/wwood/CoverM) or our [bbmap-pipeline](/MAG-pipeline.md).
 
 ### Mouse gut metagenomic libraries (Raw Data Fastq):
 
