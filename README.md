@@ -92,7 +92,7 @@ We recommend the use of [Bioconda](http://bioconda.github.io/)
 
 ## Tutorials
 
-[Map mapping, abundances, Krona plot ](/tutorials/map-to-MAGs-Krona-plot.md)
+[Explore MAG abundances with CoverM and Krona](/tutorials/map-to-MAGs-Krona-plot.md)
 
 Please open an issue if the problem cannot be solved. We will need to know how to reproduce your problem.
 

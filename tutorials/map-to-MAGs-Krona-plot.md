@@ -64,7 +64,7 @@ For this tutorial we use CoverM for mapping the reads to MAG collection.  Please
 	${SampleName}_2.fastq.gz \
 	> abundances-${SampleName}.txt
 
-![coverm](/images/coverm.png)
+![coverm](/tutorials/images/coverm.png)
 
 # Reformat-Mapping-Output
 
@@ -79,7 +79,7 @@ This will add taxonomy to the abundance profile and reformat output for Krona pl
 	#add unmapped reads
 	grep unmapped abundances-${SampleName}.txt | cut -f2 >> krona-input-MAGs-${SampleName}.txt
 
-![reformat-krona.png](/images/reformat-krona.png)
+![reformat-krona.png](/tutorials/images/reformat-krona.png)
 
 # Create-Krona-Plot
 
@@ -90,7 +90,7 @@ This will add taxonomy to the abundance profile and reformat output for Krona pl
 
 After running this steps you can open the resulting html file and explore the microbiota:
 
-![krona-plot](/images/krona-plot.png)
+![krona-plot](/tutorials/images/krona-plot.png)
 
 
 
