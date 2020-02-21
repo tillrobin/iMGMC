@@ -90,7 +90,9 @@ We recommend the use of [Bioconda](http://bioconda.github.io/)
 
 [Code for the evaluation of single-wise assembly MAGs versus all-in-one assembly MAGs](/evaluation/README.md)
 
+## Tutorials
 
+[Map mapping, abundances, Krona plot ](/tutorials/map-to-MAGs-Krona-plot.md)
 
 Please open an issue if the problem cannot be solved. We will need to know how to reproduce your problem.
 
