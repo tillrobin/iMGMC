@@ -11,11 +11,6 @@ all_iMGC_KOs=${iMGCPATH}/annotations/all_iMGC_KOs.txt
 echo -e "Split $SampleID in KeggKOs via: \n $masked_GeneID_KeggID \n $masked_KeggID_KeggKO \n $all_iMGC_KOs"
 
 
-#GeneID_KeggID=/vol/projects/trlesker/mousecatalog/Assembly-newMunich-mc5-metahit111/finals/tbl-GeneID-KeggGeneID.txt
-#KeggID_KeggKO=/vol/projects/trlesker/mousecatalog/Assembly-newMunich-mc5-metahit111/finals/tbl-KeggID-KeggKO-version2.txt
-#echo "mask mapping files"
-#tail -n+2 $GeneID_KeggID | sed "s/\./_point_/g" | sed "s/\:/_douplepoint_/g" | sed "s/\-/_minus_/g" |  sed "s/^/gene/" > masked_GeneID_KeggID.map
-#tail -n+2 $KeggID_KeggKO | sed "s/\./_point_/g" | sed "s/\:/_douplepoint_/g" | sed "s/\-/_minus_/g" > masked_KeggID_KeggKO.map
 
 cat TPM-${SampleID}.txt | cut -f1 | sort > temp-Genes-${SampleID}.tmp
 fgrep -w -f temp-Genes-${SampleID}.tmp $masked_GeneID_KeggID | sort -k 1,1 > temp-Genes-KeggGenes-${SampleID}.tmp

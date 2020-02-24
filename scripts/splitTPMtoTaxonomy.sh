@@ -7,8 +7,6 @@ GeneIDcat=${iMGCPATH}/annotations/iMGC-GeneID-CAT.txt
 
 echo "Start splitTPMtoTaxonomy.sh with ${SampleID}"
 
-#zcat /vol/projects/trlesker/mousecatalog/Assembly-newMunich-mc5-metahit111/finals/iMGC-GeneID-CAT.txt.gz | sed "s/^/gene/" > iMGC-GeneID-CAT.txt
-#sed -i "s/\r//" iMGC-GeneID-CAT.txt
 
 cat TPM-${SampleID}.txt | cut -f1 | sort > temp-Genes-${SampleID}.tmp
 fgrep -w -f temp-Genes-${SampleID}.tmp $GeneIDcat | sort -k1,1 > temp-Genes-Taxonomy-${SampleID}.tmp

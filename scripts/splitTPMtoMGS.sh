@@ -1,6 +1,6 @@
 #!/bin/bash
 # use ./splitTPMtoMGS.sh SampleID
-#cd /vol/projects/trlesker/mousecatalog/16S-matrix/__from16StoGenes
+
 SampleID=$1
 GeneIDMGSID=${iMGCPATH}/annotations/GeneID-MGSID.txt
 

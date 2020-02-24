@@ -1,6 +1,6 @@
 #!/bin/bash
 #use ./makeTPMstats.sh SampleID
-#cd /vol/projects/trlesker/mousecatalog/16S-matrix/__from16StoGenes
+
 
 SampleID=$1
 GeneID_TaxLevel=${iMGCPATH}/annotations/GeneID-TaxLevel-PPSP.txt
