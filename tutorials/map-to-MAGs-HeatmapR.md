@@ -1,28 +1,29 @@
-# Tutorials - Explore MAGs with CoverM and Krona
+# Tutorials - Compare MAGs abundances with CoverM and R heatmap
 
 ## Table of Contents
 
 [Description](#Description)  
 [Requirements](#Requirements)  
 [Data download](#Data-pre-processing)  
-[Bioconda: Installation of CoverM and Krona Plot](#Bioconda-Tool-Installation)  
+[Bioconda: Installation of CoverM and R](#Bioconda-Tool-Installation)  
 [Mapping](#Mapping)  
 [Reformat the mapping output](#Reformat-Mapping-Output)  
 [Create Krona plot](#Create-Krona-Plot)  
 
 # Description
 
-In this tutorial we will map a metagenomic library to the iMGMC mouse MAG collection to get species abundances and visualize the results with a Krona plot. 
+In this tutorial we will map a metagenomic libraries to the iMGMC mouse MAG collection to get species abundances and visualize the results with a heatmap with R. We use the metagenomic paper from [Rosshart, 2017](https://doi.org/10.1016/j.cell.2017.09.016) and generate a heatmap like in [Figure 4](https://www.cell.com/fulltext/S0092-8674(17)31065-6#figures)
 
 # Requirements
 * iMGMC data
 * [Bioconda](https://bioconda.github.io/)
 * [CoverM](https://github.com/wwood/CoverM)
-* [Krona Plot](https://github.com/marbl/Krona/wiki)
+* [R](https://cran.r-project.org/)
 
 
 # Data-pre-processing
 
+Reads have to be filtered for mouse host reads. Here we only want the MAG abundances and skip this step. Please see [Genecatalog-Pipeline](https://github.com/tillrobin/iMGMC/blob/master/genecatalog-pipeline.md#Data-pre-processing)
 
 # Data-Download
 
@@ -33,14 +34,17 @@ We select representative mMAG even with medium Quality (comp>50, con<10) to cove
 	wget -O iMGMC-mMAGs-dereplicated_genomes.tar.gz "https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137126&authkey=ADFYgL1YRjtb-Vo"
 	wget -O "MAG-annotation_CheckM_dRep_GTDB-Tk.tar.gz" "https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137698&authkey=AL9RrHT7_3oj2vI"
 	tar -xzf iMGMC-mMAGs-dereplicated_genomes.tar.gz
-	tar -xzf MAG-annotation_CheckM_dRep_GTDB-Tk.tar.gz	
+	tar -xzf MAG-annotation_CheckM_dRep_GTDB-Tk.tar.gz
+	
 	
 	# download example data
-	wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR335/000/ERR3357550/ERR3357550_1.fastq.gz
-	wget -c ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR335/000/ERR3357550/ERR3357550_2.fastq.gz
+	# waring: 39 files in total 128GB data, you can download the [CoverM results files](download-list-PRJNA390686.txt)
+	wget -c https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/download-list-PRJNA390686.txt"
+	while read line
+	do
+	wget -c $line
+	done < download-list-PRJNA390686.txt
 	
-	# set sample name
-	SampleName=ERR3357550
 
 # Bioconda-Tool-Installation
 
@@ -48,7 +52,7 @@ We install CoverM and Krona Plot via Bioconda. Please be sure the you install an
 
 
 	conda create -n coverm coverm
-	conda create -n krona krona
+	conda create -n r-base r-base
 	
 
 # Mapping
@@ -61,12 +65,10 @@ For this tutorial we use CoverM for mapping the reads to MAG collection.  Please
     coverm genome --threads 24 \
 	--genome-fasta-directory dereplicated_genomes \
 	--genome-fasta-extension fa \
-	--coupled \
-	${SampleName}_1.fastq.gz \
-	${SampleName}_2.fastq.gz \
-	> abundances-${SampleName}.txt
+	--coupled  SRR6032* \
+	> abundances-CheckM-PRJNA390686.txt
 
-![coverm](/tutorials/images/coverm.png)
+
 
 # Reformat-Mapping-Output
 
