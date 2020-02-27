@@ -66,7 +66,7 @@ For this tutorial we use CoverM for mapping the reads to MAG collection.  Please
 	--genome-fasta-directory dereplicated_genomes \
 	--genome-fasta-extension fa \
 	--coupled  SRR6032* \
-	> abundances-CheckM-PRJNA390686.txt
+	> abundances-PRJNA390686.txt
 
 
 
@@ -74,27 +74,27 @@ For this tutorial we use CoverM for mapping the reads to MAG collection.  Please
 
 This will add taxonomy to the abundance profile and reformat output for Krona plotting with MAG-name
 
-    # add taxonomy and MAG-name
+	# add taxonomy and MAG-name
+	head -n 1 abundances-PRJNA390686.txt | sed "s/_1.fastq.gz Relative Abundance (%)//g" > abundances-PRJNA390686-withTaxonomy.txt
 	paste \
-	<( tail -n+3  abundances-${SampleName}.txt | sort ) \
-	<( cut -f1 abundances-${SampleName}.txt | sed "s/^/\^/" | grep -w -f - gtdbtk.bac120.summary.tsv | cut -f1,2 | sort ) | \
-	awk '{print $2"\t"$4"-"$1}' | tr -s ";" $"\t" > krona-input-MAGs-${SampleName}.txt
+	<( cut -f1 abundances-PRJNA390686.txt | sed "s/^/\^/" | grep -w -f - gtdbtk.bac120.summary.tsv | cut -f1,2 | sort | awk '{print $2"-"$1}' | sed "s/.*f__/f__/" ) \
+	<( tail -n+3  abundances-PRJNA390686.txt | sort | cut -f2- ) \
+	>> abundances-PRJNA390686-withTaxonomy.txt
 
-	#add unmapped reads
-	grep unmapped abundances-${SampleName}.txt | cut -f2 >> krona-input-MAGs-${SampleName}.txt
+![CoverM-Plot-PRJNA390686](/tutorials/images/coverm-PRJNA390686.png)
 
-![reformat-krona.png](/tutorials/images/reformat-krona.png)
-
-# Create-Krona-Plot
+# Create-Heatmap-with-R
 
     # bioconda activate enviroment
-	conda activate krona
-	# run Krona
-	ktImportText -n MAG-mapping -o ${SampleName}.krona.html krona-input-MAGs-${SampleName}.txt
+	conda activate r-base
+	# download example R Script
+	wget https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/Rscript_heatmap.R
+	# run Rscript
+	Rscript Rscript_heatmap.R
 
-After running this steps you can open the resulting html file and explore the microbiota:
+After running this steps you can open the resulting pdf file and explore the microbiota. Colors blue: Lab-mice microbiota, dark-blue: reconstituted Lab-mice microbiota, green: Wild-mice microbiota, dark-green: Wild-mice reconstituted. 
 
-![krona-plot](/tutorials/images/krona-plot.png)
+![heatmap-mean](/tutorials/images/headmap_abundances_mean.png)
 
 
 

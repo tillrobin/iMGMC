@@ -10,6 +10,7 @@
   - higher taxonomic resolution and more accuracy by using contigs for annotation
   - 16S rRNA gene integration via linkage to bins
   - expansion by 20,927 MAGs from sample-wise assembly of 871 mouse gut metagenomic samples, representing 1,296 species
+  - [Pipelines](#Pipelines) and [Tutorials](#Tutorials) to process you own data
 
 See our paper for details. Will be updated soon, please use pre-print version:
 
@@ -92,7 +93,10 @@ We recommend the use of [Bioconda](http://bioconda.github.io/)
 
 ## Tutorials
 
-[Explore MAG abundances with CoverM and Krona](/tutorials/map-to-MAGs-Krona-plot.md)
+[Explore MAG abundances with CoverM and Krona Plot](/tutorials/map-to-MAGs-Krona-plot.md)
+
+[Compare MAGs abundances with CoverM and R heatmap](/tutorials/map-to-MAGs-HeatmapR.md)
+
 
 Please open an issue if the problem cannot be solved. We will need to know how to reproduce your problem.
 
