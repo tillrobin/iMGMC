@@ -8,7 +8,7 @@
 [Bioconda: Installation of CoverM and R](#Bioconda-Tool-Installation)  
 [Mapping](#Mapping)  
 [Reformat the mapping output](#Reformat-Mapping-Output)  
-[Create Krona plot](#Create-Krona-Plot)  
+[Create Heatmap with R](#Create-Heatmap-with-R)  
 
 # Description
 
@@ -57,7 +57,7 @@ We install CoverM and Krona Plot via Bioconda. Please be sure the you install an
 
 # Mapping
 
-For this tutorial we use CoverM for mapping the reads to MAG collection.  Please see [CoverM documentation](https://github.com/wwood/CoverM) for more details. Waring this process need around 32 GB of memory.
+For this tutorial we use CoverM for mapping the reads to MAG collection.  Please see [CoverM documentation](https://github.com/wwood/CoverM) for more details. Waring this process need around 32 GB of memory and some hours run time. Download: [CoverM-Output](https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/Rscript_heatmap.R)
 
     # bioconda activate enviroment
 	conda activate coverm
@@ -68,7 +68,7 @@ For this tutorial we use CoverM for mapping the reads to MAG collection.  Please
 	--coupled  SRR6032* \
 	> abundances-PRJNA390686.txt
 
-
+![CoverM-Plot-PRJNA390686](/tutorials/images/coverm-PRJNA390686.png)
 
 # Reformat-Mapping-Output
 
@@ -81,7 +81,7 @@ This will add taxonomy to the abundance profile and reformat output for Krona pl
 	<( tail -n+3  abundances-PRJNA390686.txt | sort | cut -f2- ) \
 	>> abundances-PRJNA390686-withTaxonomy.txt
 
-![CoverM-Plot-PRJNA390686](/tutorials/images/coverm-PRJNA390686.png)
+![CoverM-Plot-PRJNA390686](/tutorials/images/coverm-PRJNA390686-reformat.png)
 
 # Create-Heatmap-with-R
 
@@ -92,9 +92,11 @@ This will add taxonomy to the abundance profile and reformat output for Krona pl
 	# run Rscript
 	Rscript Rscript_heatmap.R
 
-After running this steps you can open the resulting pdf file and explore the microbiota. Colors blue: Lab-mice microbiota, dark-blue: reconstituted Lab-mice microbiota, green: Wild-mice microbiota, dark-green: Wild-mice reconstituted. 
+After running this steps you can open the resulting pdf files and explore the microbiota. Colors dark-blue: Lab-mice microbiota, blue: reconstituted Lab-mice microbiota, green: Wild-mice microbiota, dark-green: reconstituted Wild-mice microbiota. You can see clustering for the samples into the Lab and Wild mice groups.
 
 ![heatmap-mean](/tutorials/images/headmap_abundances_mean.png)
 
+Futhermore, you can look at specific species eg. "Helicobacter". You can see that there is no Helicobacter species in the Lab mice (blue samples). Only two for four species get transfered from the orginal Wild mice (green) to the reconstituted Wild-mice microbiota (dark-green).
 
+![heatmap-mean](/tutorials/images/headmap_abundances_helicobacter.png)
 
