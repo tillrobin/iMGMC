@@ -12,7 +12,7 @@
 
 # Description
 
-In this tutorial we will map a metagenomic libraries to the iMGMC mouse MAG collection to get species abundances and visualize the results with a heatmap with R. We use the metagenomic paper from [Rosshart, 2017](https://doi.org/10.1016/j.cell.2017.09.016) and generate a heatmap like in [Figure 4](https://www.cell.com/fulltext/S0092-8674(17)31065-6#figures)
+In this tutorial, we will map a metagenomic libraries to the iMGMC mouse MAG collection to get species abundances and visualize the results with a heatmap with R. We use the metagenomic data from [Rosshart, 2017](https://doi.org/10.1016/j.cell.2017.09.016) and generate a heatmap like in [Figure 4](https://www.cell.com/fulltext/S0092-8674(17)31065-6#figures)
 
 # Requirements
 * iMGMC data
@@ -57,9 +57,9 @@ We install CoverM and Krona Plot via Bioconda. Please be sure the you install an
 
 # Mapping
 
-For this tutorial we use CoverM for mapping the reads to MAG collection.  Please see [CoverM documentation](https://github.com/wwood/CoverM) for more details. Waring this process need around 32 GB of memory and some hours run time. Download: [CoverM-Output](https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/Rscript_heatmap.R)
+For this tutorial, we use CoverM for mapping the reads to MAG collection.  Please see [CoverM documentation](https://github.com/wwood/CoverM) for more details. Waring this process need, around 32 GB of memory and some hours run time. Download: [CoverM-Output](https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/Rscript_heatmap.R)
 
-    # bioconda activate enviroment
+    # bioconda activate environment
 	conda activate coverm
 	# run CoverM for Sample ($SampleName) with ReadR1 ($Fastq_R1) and ReadR2 ($Fastq_R2)
     coverm genome --threads 24 \
@@ -85,17 +85,17 @@ This will add taxonomy to the abundance profile and reformat output for Krona pl
 
 # Create-Heatmap-with-R
 
-    # bioconda activate enviroment
+    # bioconda activate environment
 	conda activate r-base
 	# download example R Script
 	wget https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/Rscript_heatmap.R
 	# run Rscript
 	Rscript Rscript_heatmap.R
 
-After running this steps you can open the resulting pdf files and explore the microbiota. Colors dark-blue: Lab-mice microbiota, light-blue: reconstituted Lab-mice microbiota, dark-green: Wild-mice microbiota, light-green: reconstituted Wild-mice microbiota. You can see clustering for the samples into the Lab and Wild mice groups.
+After running these steps, you can open the resulting pdf files and explore the microbiota. Colors dark blue: Lab-mice microbiota, light blue: reconstituted Lab-mice microbiota, dark green: Wild-mice microbiota, light green: reconstituted Wild-mice microbiota. You can see clustering for the samples into the Lab and Wild mice groups.
 
 ![heatmap-mean](/tutorials/images/headmap_abundances_mean.png)
 
-Futhermore, you can look at specific species eg. "Helicobacter". You can see that there is no Helicobacter species in the Lab mice (blue samples). Only two for four species get transfered from the orginal Wild mice (darkt-green) to the reconstituted Wild-mice microbiota (light-green).
+Furthermore, you can look at specific species eg. "Helicobacter". You can see that there is no Helicobacter species in the Lab mice (blue samples). Only two for four species were transferred from the original Wild mice (dark green) to the reconstituted Wild-mice microbiota (light green).
 
 ![heatmap-mean](/tutorials/images/headmap_abundances_helicobacter.png)
