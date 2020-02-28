@@ -92,11 +92,10 @@ This will add taxonomy to the abundance profile and reformat output for Krona pl
 	# run Rscript
 	Rscript Rscript_heatmap.R
 
-After running this steps you can open the resulting pdf files and explore the microbiota. Colors dark-blue: Lab-mice microbiota, blue: reconstituted Lab-mice microbiota, green: Wild-mice microbiota, dark-green: reconstituted Wild-mice microbiota. You can see clustering for the samples into the Lab and Wild mice groups.
+After running this steps you can open the resulting pdf files and explore the microbiota. Colors dark-blue: Lab-mice microbiota, light-blue: reconstituted Lab-mice microbiota, dark-green: Wild-mice microbiota, light-green: reconstituted Wild-mice microbiota. You can see clustering for the samples into the Lab and Wild mice groups.
 
 ![heatmap-mean](/tutorials/images/headmap_abundances_mean.png)
 
-Futhermore, you can look at specific species eg. "Helicobacter". You can see that there is no Helicobacter species in the Lab mice (blue samples). Only two for four species get transfered from the orginal Wild mice (green) to the reconstituted Wild-mice microbiota (dark-green).
+Futhermore, you can look at specific species eg. "Helicobacter". You can see that there is no Helicobacter species in the Lab mice (blue samples). Only two for four species get transfered from the orginal Wild mice (darkt-green) to the reconstituted Wild-mice microbiota (light-green).
 
 ![heatmap-mean](/tutorials/images/headmap_abundances_helicobacter.png)
-
