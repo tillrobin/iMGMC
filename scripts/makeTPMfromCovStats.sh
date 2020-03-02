@@ -13,7 +13,7 @@ gawk -v PMSF=${PerMillionScalingFactor} -v OFS='\t' -v FS='\t' '{print $3/PMSF}'
 
 
 
-paste <(tail -n+2 ${SampleID}.covstats | cut -f1) temp-TPM-${SampleID}.tmp | sort -k1,1 -n | sed "s/^/gene/" | fgrep -w -v "0" > TPM-${SampleID}.txt
+paste <(tail -n+2 ${SampleID}.covstats | cut -f1) temp-TPM-${SampleID}.tmp | sort -k1,1 -n | sed "s/^/gene/" | grep -w -v "0$" > TPM-${SampleID}.txt
 
 rm temp-RPK-${SampleID}.tmp
 rm temp-TPM-${SampleID}.tmp

@@ -21,9 +21,9 @@ heatmap(matrix_abundances_mean , ColSideColors=as.vector(my_SampleMetaData$Color
 dev.off()
 
 # selection of "Helicobacter"
-matrix_abundances_Helico <- subset(matrix_abundances_no_zeros,grepl("Helico",rownames(matrix_abundances_no_zeros)))
+matrix_abundances_Helico <- subset(matrix_abundances_no_zeros,grepl("Helicobacter",rownames(matrix_abundances_no_zeros)))
 
-pdf("headmap_abundances_Helico.pdf",width = 12,height = 6,onefile=FALSE )
+pdf("headmap_abundances_Helicobacter.pdf",width = 12,height = 6,onefile=FALSE )
 heatmap(matrix_abundances_Helico , ColSideColors=as.vector(my_SampleMetaData$Color))
 dev.off()
 
