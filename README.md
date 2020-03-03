@@ -12,10 +12,13 @@
   - expansion by 20,927 MAGs from sample-wise assembly of 871 mouse gut metagenomic samples, representing 1,296 species
   - [Pipelines](#Pipelines) and [Tutorials](#Tutorials) to process you own data
 
-See our paper for details. Will be updated soon, please use pre-print version:
+See our paper for details.
 
-**An integrated metagenome catalog enables novel insights into the murine gut microbiome**  
-Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez, Ilias Lagkouvardos, John F. Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig http://biorxiv.org/cgi/content/short/528737v1
+**An integrated metagenome catalog enables new insights into the murine gut microbiome**  
+Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez, Ilias Lagkouvardos, John F. Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig
+[Cell Reports VOLUME 30, ISSUE 9, P2909-2922.E6, MARCH 03, 2020](https://www.cell.com/cell-reports/fulltext/S2211-1247(20)30197-2)
+
+[older pre-print version](http://biorxiv.org/cgi/content/short/528737v1)
 
 ### External studies providing data:
 Xiao, Liang, et al. "A catalog of the mouse gut metagenome." Nature biotechnology 33.10 (2015): 1103-1108. http://doi.org/10.1038/nbt.3353

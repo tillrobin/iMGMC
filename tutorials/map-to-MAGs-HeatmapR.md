@@ -12,7 +12,7 @@
 
 # Description
 
-In this tutorial, we will map a metagenomic libraries to the iMGMC mouse MAG collection to get species abundances and visualize the results with a heatmap with R. We use the metagenomic data from [Rosshart, 2017](https://doi.org/10.1016/j.cell.2017.09.016) and generate a heatmap like in [Figure 4](https://www.cell.com/fulltext/S0092-8674(17)31065-6#figures)
+In this tutorial, we will map metagenomic libraries to the iMGMC mouse MAG collection, calculate species abundances and visualize the results with a heatmap with R. We use the metagenomic data from [Rosshart, 2017](https://doi.org/10.1016/j.cell.2017.09.016) and generate a heatmap like in [Figure 4](https://www.cell.com/fulltext/S0092-8674(17)31065-6#figures)
 
 # Requirements
 * iMGMC data
@@ -38,8 +38,8 @@ We select representative mMAG even with medium Quality (comp>50, con<10) to cove
 	
 	
 	# download example data
-	# waring: 39 files in total 128GB data, you can download the [CoverM results files](download-list-PRJNA390686.txt)
-	wget -c https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/download-list-PRJNA390686.txt"
+	# waring: 39 files in total 128GB data, you can download the [CoverM results files](https://github.com/tillrobin/iMGMC/raw/master/tutorials/data/abundances-PRJNA390686.txt)
+	wget -c "https://github.com/tillrobin/iMGMC/raw/master/tutorials/data/download-list-PRJNA390686.txt"
 	while read line
 	do
 	wget -c $line
@@ -57,7 +57,7 @@ We install CoverM and Krona Plot via Bioconda. Please be sure the you install an
 
 # Mapping
 
-For this tutorial, we use CoverM for mapping the reads to MAG collection.  Please see [CoverM documentation](https://github.com/wwood/CoverM) for more details. Waring this process need, around 32 GB of memory and some hours run time. Download: [CoverM-Output](https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/Rscript_heatmap.R)
+For this tutorial, we use CoverM for mapping the reads to MAG collection.  Please see [CoverM documentation](https://github.com/wwood/CoverM) for more details. Waring this process need, around 32 GB of memory and some hours run time. Download: [CoverM-Output](https://github.com/tillrobin/iMGMC/raw/master/tutorials/data/abundances-PRJNA390686.txt)
 
     # bioconda activate environment
 	conda activate coverm
@@ -88,7 +88,7 @@ This will add taxonomy to the abundance profile and reformat output for Krona pl
     # bioconda activate environment
 	conda activate r-base
 	# download example R Script
-	wget https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/Rscript_heatmap.R
+	wget https://github.com/tillrobin/iMGMC/raw/master/tutorials/data/Rscript_heatmap.R
 	# run Rscript
 	Rscript Rscript_heatmap.R
 
@@ -96,6 +96,6 @@ After running these steps, you can open the resulting pdf files and explore the 
 
 ![heatmap-mean](/tutorials/images/headmap_abundances_mean.png)
 
-Furthermore, you can look at specific species eg. "Helicobacter". You can see that there is no Helicobacter species in the Lab mice (blue samples). Only two for four species were transferred from the original Wild mice (dark green) to the reconstituted Wild-mice microbiota (light green).
+Furthermore, you can look at specific species eg. "Helicobacter". You can see that there are no Helicobacter species in the Lab mice (blue samples). Only two of four species were transferred from the original Wild mice (dark green) to the reconstituted Wild-mice microbiota (light green).
 
 ![heatmap-mean](/tutorials/images/headmap_abundances_helicobacter.png)
