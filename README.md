@@ -59,6 +59,7 @@ For species abundance determination you can use [CoverM](https://github.com/wwoo
 Accession codes of the used gut metagenome sequences:
 European Nucleotide Archive: [ERP008710](https://www.ebi.ac.uk/ena/data/view/ERP008710), [ERA473426](https://www.ebi.ac.uk/ena/data/view/ERA473426), [PRJEB32890](https://www.ebi.ac.uk/ena/data/view/PRJEB32890) and to the Metagenomics Rapid Genomes/Metagenomes (MG-RAST) with ID 4661127.3/ [mgp5130](https://www.mg-rast.org/linkin.cgi?project=mgp5130)
 
+___
 
 ## Pipelines:
 
@@ -92,11 +93,20 @@ We recommend the use of [Bioconda](http://bioconda.github.io/)
 
 [Code for the evaluation of single-wise assembly MAGs versus all-in-one assembly MAGs](/evaluation/README.md)
 
+___
+
 ## Tutorials
+
+![tutorials](/images/tutorials.png)
 
 [Explore MAG abundances with CoverM and Krona Plot](/tutorials/map-to-MAGs-Krona-plot.md)
 
 [Compare MAGs abundances with CoverM and R heatmap](/tutorials/map-to-MAGs-HeatmapR.md)
+
+[Ordination of samples by gene and KO profiles](/tutorials/map-to-Catalog-Ordination.md)
+
+
+___
 
 
 Please open an issue if the problem cannot be solved. We will need to know how to reproduce your problem.
