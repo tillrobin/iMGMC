@@ -31,8 +31,8 @@ We select representative mMAG even with medium Quality (comp>50, con<10) to cove
 
 
 	# download mMAG genomes and annotations
-	wget -O iMGMC-mMAGs-dereplicated_genomes.tar.gz "https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137126&authkey=ADFYgL1YRjtb-Vo"
-	wget -O "MAG-annotation_CheckM_dRep_GTDB-Tk.tar.gz" "https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137698&authkey=AL9RrHT7_3oj2vI"
+	wget -c "https://zenodo.org/record/3631711/files/iMGMC-mMAGs-dereplicated_genomes.tar.gz"
+	wget -c "https://zenodo.org/record/3631711/files/MAG-annotation_CheckM_dRep_GTDB-Tk.tar.gz?download=1"
 	tar -xzf iMGMC-mMAGs-dereplicated_genomes.tar.gz
 	tar -xzf MAG-annotation_CheckM_dRep_GTDB-Tk.tar.gz
 	
@@ -49,7 +49,6 @@ We select representative mMAG even with medium Quality (comp>50, con<10) to cove
 # Bioconda-Tool-Installation
 
 We install CoverM and Krona Plot via Bioconda. Please be sure the you install and activate Bioconda before.
-
 
 	conda create -n coverm coverm
 	conda create -n r-base r-base
