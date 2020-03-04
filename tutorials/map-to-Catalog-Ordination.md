@@ -1,5 +1,6 @@
 # Tutorials - Ordination of samples by gene and KO profiles
 
+
 ## Table of Contents
 
 [Description](#Description)  
@@ -50,13 +51,16 @@ We will need the [iMGMC gene catalog](https://zenodo.org/record/3631711/files/iM
 
 # Bioconda-Tool-Installation
 
+
 We install bbmap and R via Bioconda. Please be sure the you install and activate Bioconda before.
 
 
-	conda create -n iMGMCtutorial bbmap r-base r-vegan r-data.table r-ggplot r-reshape2
+	conda create -n iMGMCtutorial bbmap r-base r-vegan r-data.table r-ggplot
+
 	
 
 # Mapping
+
 
 For this tutorial, we use bbmap for mapping the reads to iMGMC gene catalog.  Please see [Genecatalog-Pipeline](https://github.com/tillrobin/iMGMC/blob/master/genecatalog-pipeline.md) for more details. Waring this process need, around 32 GB of memory and some hours run time. Download the results here: [bbmap-covstats-files](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133643&authkey=AGbSUUUNGTYK8dg)
 	wget -c https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/download-list-PRJNA390686.txt"
@@ -105,8 +109,8 @@ The script will conduct all *.TPM and KOsum*.tab into files including SampleID a
 
 After running these steps, you can open the resulting pdf files and see the relationship of the microbiota samples. Colors dark blue: Lab-mice microbiota, light blue: reconstituted Lab-mice microbiota, dark green: Wild-mice microbiota, light green: reconstituted Wild-mice microbiota. You can see clustering for the samples into the Lab and Wild mice groups according to the gene abundance profiles:
 
-![heatmap-mean](/tutorials/images/plot_ordination_genes.png)
+![plot_ordination_genes](/tutorials/images/plot_ordination_genes.png)
 
 Furthermore, you can look at ordination of the functional profiles of the samples:
 
-![heatmap-mean](/tutorials/images/plot_ordination_KO.png)
+![plot_ordination_KO](/tutorials/images/plot_ordination_KO.png)
