@@ -8,7 +8,7 @@
 [Database-settings](#Database-settings)  
 [Mapping](#Mapping)  
 [TPM-normalization](#TPM-normalization)  
-[Basic-statistics](#Basic-statistics)  
+[Basic-Statistics](#Basic-statistics)  
 
 # Description
 
@@ -55,10 +55,12 @@ You can use bbmap and the reference mouse genome from [Ensembl](http://www.ensem
     download.sh
 
 **2. Index iMGMC catalog**
+
     cd iMGCM-data
     bbmap.sh ref=iMGMC-GeneID.fasta.gz
 
 **3. Export PATH for the data**
+
     export iMGCM-data=$PWD
 
 
@@ -79,13 +81,21 @@ For this tutorial we use bbmap for mapping the reads to iMGCM catalog (ORFs: iMG
 
 
 # TPM-normalization
-You need to normalize you samples counts for a comparison. Here we use TPM-normalization to create TPM-${SampleID}.txt form ${SampleName}.covstat :
+You need to normalize you samples counts for a comparison. Here we use TPM-normalization to create ${SampleID}.TPM form ${SampleName}.covstat :
 
-    makeTPMfromCovStats.sh ${SampleName}.covstat
+    make-GeneID-TPM-fromCovStats.sh ${SampleName}.covstat
 
 
 # Basic-statistics
 
-under construction
+## Kegg-KO annotations
+To add Kegg KO annotations to our "${SampleID}.TPM" file you need the mapping file [iMGMC-map-GeneID-KeggKO.tab](https://zenodo.org/record/3631711/files/iMGMC_map_functionality.tar.gz). GeneID without a KO annotation will be obmitted. For each GeneID only one KO will be added. In addition the summary file "KOsum-${SampleID}.tab" will be generated, including summarized TPM for each KO in the sample.
 
+    make-KO-TPM-fromTPM.sh ${SampleName}.covstat
 
+# Summary of statistics for all samples
+The script will conduct all *.TPM and KOsum*.tab into files including SampleID and a header (long-format table). This files can be eg. imported to R. 
+
+    sumup-TPM-KOsum-files.sh
+
+See an example for an [gene and KO ordination](https://github.com/tillrobin/iMGMC/blob/master/tutorials/map-to-Catalog-Ordination.md) in the [tutorial section](https://github.com/tillrobin/iMGMC#Tutorials).
