@@ -95,7 +95,7 @@ To add Kegg KO annotations to our "${SampleID}.TPM" file you need the mapping fi
     make-KO-TPM-fromTPM.sh ${SampleName}.TPM
 
 ## Summary of KO statistics for all samples
-The script will conduct all *.TPM and KOsum*.tab into files including SampleID and a header (long-format table). This files can be eg. imported to R. 
+The script will conduct all "${SampleName}.TPM" and "KOsum-{SampleName}.tab" files into a table including SampleID and a header (long-format table). These files can be eg. imported to R. 
 
     sumup-TPM-KOsum-files.sh
 
@@ -107,15 +107,15 @@ In this step we summarize the TPM of ORFs (GeneID) to the corresponding ContigID
     make-GeneID-ContigID-BinId-TPM-fromTPM.sh ${SampleName}.TPM
 
 ## Summary of ContigID and BinID statistics for all samples
-The script will conduct all "ContigID-sumTPM-${SampleID}.tab" and "BinID-sumTPM-${SampleID}.tab" files including SampleID and a header (long-format table). This files can be eg. imported to R. 
+The script will conduct all "ContigID-sumTPM-${SampleID}.tab" and "BinID-sumTPM-${SampleID}.tab" files including SampleID and a header (long-format table). These files can be eg. imported to R. 
 
     sumup-TPM-ContigID-BinID-files.sh
 	
 Results:
 
-SampleID-ContigID-TPM.tab : Sum of gene TPM-counts for each sample for each ContigID
-SampleID-ContigID-TPM-min1.tab :  Sum of gene TPM-counts for each sample for each ContigID with a minimum of TPM>=1
-SampleID-BinID-TPM.tab : Sum of gene TPM-counts for each sample for each BinID
-SampleID-BinID-TPM-min1.tab :  Sum of gene TPM-counts for each sample for each BinID with a minimum of TPM>=1
+SampleID-ContigID-TPM.tab : Sum of gene TPM-counts for each sample for each ContigID  
+SampleID-ContigID-TPM-min1.tab :  Sum of gene TPM-counts for each sample for each ContigID with a minimum of TPM>=1  
+SampleID-BinID-TPM.tab : Sum of gene TPM-counts for each sample for each BinID  
+SampleID-BinID-TPM-min1.tab :  Sum of gene TPM-counts for each sample for each BinID with a minimum of TPM>=1  
 
 
