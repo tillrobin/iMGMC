@@ -87,15 +87,35 @@ You need to normalize you samples counts for a comparison. Here we use TPM-norma
 
 
 # Basic-statistics
+To get basic statistics for samples eg. to import in other software like R you need a ${SampleName}.covstat for each sample. All scripts used below you can find [here](https://github.com/tillrobin/iMGMC/tree/master/scripts).
 
 ## Kegg-KO annotations
 To add Kegg KO annotations to our "${SampleID}.TPM" file you need the mapping file [iMGMC-map-GeneID-KeggKO.tab](https://zenodo.org/record/3631711/files/iMGMC_map_functionality.tar.gz). GeneID without a KO annotation will be obmitted. For each GeneID only one KO will be added. In addition the summary file "KOsum-${SampleID}.tab" will be generated, including summarized TPM for each KO in the sample.
 
-    make-KO-TPM-fromTPM.sh ${SampleName}.covstat
+    make-KO-TPM-fromTPM.sh ${SampleName}.TPM
 
-# Summary of statistics for all samples
+## Summary of KO statistics for all samples
 The script will conduct all *.TPM and KOsum*.tab into files including SampleID and a header (long-format table). This files can be eg. imported to R. 
 
     sumup-TPM-KOsum-files.sh
 
 See an example for an [gene and KO ordination](https://github.com/tillrobin/iMGMC/blob/master/tutorials/map-to-Catalog-Ordination.md) in the [tutorial section](https://github.com/tillrobin/iMGMC#Tutorials).
+
+## Mapping GeneID to orginal ContigID and BinID
+In this step we summarize the TPM of ORFs (GeneID) to the corresponding ContigID and BinID for each "${SampleID}.TPM" file. You need the mapping file [iMGMC-map-Gene-Contig-Bin.tab](https://zenodo.org/record/3631711/files/iMGMC-map-Gene-Contig-Bin.tab.gz). First we add the ContigID and BinID information to the "${SampleID}.TPM" -> "GeneID-ContigID-BinID-${SampleID}.tab". In addition two summary files "ContigID-sumTPM-${SampleID}.tab" and "BinID-sumTPM-${SampleID}.tab" will be generated, including summarized TPM form each sample.
+
+    make-GeneID-ContigID-BinId-TPM-fromTPM.sh ${SampleName}.TPM
+
+## Summary of ContigID and BinID statistics for all samples
+The script will conduct all "ContigID-sumTPM-${SampleID}.tab" and "BinID-sumTPM-${SampleID}.tab" files including SampleID and a header (long-format table). This files can be eg. imported to R. 
+
+    sumup-TPM-ContigID-BinID-files.sh
+	
+Results:
+
+SampleID-ContigID-TPM.tab : Sum of gene TPM-counts for each sample for each ContigID
+SampleID-ContigID-TPM-min1.tab :  Sum of gene TPM-counts for each sample for each ContigID with a minimum of TPM>=1
+SampleID-BinID-TPM.tab : Sum of gene TPM-counts for each sample for each BinID
+SampleID-BinID-TPM-min1.tab :  Sum of gene TPM-counts for each sample for each BinID with a minimum of TPM>=1
+
+

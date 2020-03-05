@@ -30,7 +30,7 @@ Reads have to be filtered for mouse host reads. Please see [Genecatalog-Pipeline
 
 # Data-Download
 
-We will need the [iMGMC gene catalog](https://zenodo.org/record/3631711/files/iMGMC-GeneID.fasta.gz) and the [functionel annotations](https://zenodo.org/record/3631711/files/iMGMC_map_functionality.tar.gz)
+We will need the [iMGMC gene catalog](https://zenodo.org/record/3631711/files/iMGMC-GeneID.fasta.gz) and the [functionel annotations](https://zenodo.org/record/3631711/files/iMGMC_map_functionality.tar.gz). Waring the 39 files are in total 128GB big, if you wamt can download the [bbmap-covstats-files](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133643&authkey=AGbSUUUNGTYK8dg) and skip downloading and mapping step.
 
 
 	# download iMGMC gene catalog and annotations
@@ -41,7 +41,6 @@ We will need the [iMGMC gene catalog](https://zenodo.org/record/3631711/files/iM
 	
 	
 	# download example data
-	# waring: 39 files are in total 128GB big, you can download the [bbmap-covstats-files](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133643&authkey=AGbSUUUNGTYK8dg)
 	wget -c https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/download-list-PRJNA390686.txt"
 	while read line
 	do
@@ -63,7 +62,7 @@ We install bbmap and R via Bioconda. Please be sure the you install and activate
 
 
 For this tutorial, we use bbmap for mapping the reads to iMGMC gene catalog.  Please see [Genecatalog-Pipeline](https://github.com/tillrobin/iMGMC/blob/master/genecatalog-pipeline.md) for more details. Waring this process need, around 32 GB of memory and some hours run time. Download the results here: [bbmap-covstats-files](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133643&authkey=AGbSUUUNGTYK8dg)
-	wget -c https://github.com/tillrobin/iMGMC/blob/master/tutorials/data/download-list-PRJNA390686.txt"
+
 
     # bioconda activate environment
 	conda activate iMGMCtutorial
