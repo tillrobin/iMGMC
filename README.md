@@ -34,23 +34,23 @@ Please download the files by using the links in the table, use script provided h
 
 | Description | Size | Link |
 |--|--|--|
-| Catalog ORF sequences | 1 GB | [iMGMC-GeneID.fasta.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133644&authkey=AD4pwU2r1mk4FHU) |
-| Full assembly contigs | 1.3 GB | [iMGMC-ConitgID.fasta.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133647&authkey=AIM3mw3FbPE6b_M) |
-| Mapping File (GeneID->ContigID->BinID) | 30 MB | [iMGMC-map-Gene-Contig-Bin.tab.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133646&authkey=AJM_z8-oLOlOO58) |
-| Taxonomic annotations | 40 MB | [iMGMC_map_taxonomy.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133736&authkey=AOjPxI-kDPJEpc8) |
-| Functional annotations | 36 MB | [iMGMC_map_functionality.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133738&authkey=APk09LufvLmUJN8) |
-| 16S rRNA sequences | 2 MB | [iMGMC-16SrRNAgenes.fasta](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2133739&authkey=AAsGBvRCokrqALg) |
+| Catalog ORF sequences | 1 GB | [iMGMC-GeneID.fasta.gz](https://zenodo.org/record/3631711/files/iMGMC-GeneID.fasta.gz) |
+| Full assembly contigs | 1.3 GB | [iMGMC-ConitgID.fasta.gz](https://zenodo.org/record/3631711/files/iMGMC-ConigID.fasta.gz) |
+| Mapping File (GeneID->ContigID->BinID) | 30 MB | [iMGMC-map-Gene-Contig-Bin.tab.gz](https://zenodo.org/record/3631711/files/iMGMC-map-Gene-Contig-Bin.tab.gz) |
+| Taxonomic annotations | 42 MB | [iMGMC_map_taxonomy.tar.gz](https://zenodo.org/record/3631711/files/iMGMC_map_taxonomy.tar.gz) |
+| Functional annotations | 38 MB | [iMGMC_map_functionality.tar.gz](https://zenodo.org/record/3631711/files/iMGMC_map_functionality.tar.gz) |
+| 16S rRNA sequences | 2 MB | [iMGMC-16SrRNAgenes.fasta](https://zenodo.org/record/3631711/files/iMGMC-16SrRNAgenes.fasta) |
 
 ### Metagenome-assembled genomes (MAGs) :
 
 | Description | Size | Link |
 |--|--|--|
-| integrated MAGs | 0.5 GB | [iMGMC_MAGs.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2134225&authkey=ABA7bpleGh606kI) |
-| representative mMAGs (n=1296) | 1 GB | [iMGMC-mMAGs-dereplicated_genomes.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137126&authkey=ADFYgL1YRjtb-Vo) | 
-| representative hqMAGs (n=830) | 0.7 GB | [iMGMC-hqMAGs-dereplicated_genomes.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137129&authkey=AFbfuXtd4Cm9kHQ) | 
-| all mMAGs (n=20,927) | 15 GB | [iMGMC-mMAGs.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137128&authkey=AFxAhkbg1uYWzhY) | 
-| Annotations by CheckM, dRep-Clustering, GTDB-Tk | 2 MB | [MAG-annotation_CheckM_dRep_GTDB-Tk.tar.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137698&authkey=AL9RrHT7_3oj2vI) |
-| Functional annotations (hqMAGs by eggNOG mapper v2) | 187 MB | [hqMAGs.emapper.annotations.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2137699&authkey=AJXI4bt0kzwDJtw) |
+| integrated MAGs | 0.5 GB | [iMGMC_MAGs.tar.gz](https://zenodo.org/record/3631711/files/iMGMC-MAGs.tar.gz) |
+| representative mMAGs (n=1296) | 1 GB | [iMGMC-mMAGs-dereplicated_genomes.tar.gz](https://zenodo.org/record/3631711/files/iMGMC-mMAGs-dereplicated_genomes.tar.gz) | 
+| representative hqMAGs (n=830) | 0.7 GB | [iMGMC-hqMAGs-dereplicated_genomes.tar.gz](https://zenodo.org/record/3631711/files/iMGMC-hqMAGs-dereplicated_genomes.tar.gz) | 
+| all mMAGs (n=20,927) | 15 GB | [iMGMC-mMAGs.tar.gz](https://zenodo.org/record/3631711/files/iMGMC-mMAGs.tar.gz) | 
+| Annotations by CheckM, dRep-Clustering, GTDB-Tk | 2 MB | [MAG-annotation_CheckM_dRep_GTDB-Tk.tar.gz](https://zenodo.org/record/3631711/files/MAG-annotation_CheckM_dRep_GTDB-Tk.tar.gz) |
+| Functional annotations (hqMAGs by eggNOG mapper v2) | 187 MB | [hqMAGs.emapper.annotations.gz](https://zenodo.org/record/3631711/files/hqMAGs.emapper.annotations.gz) |
 
 For species abundance determination you can use [CoverM](https://github.com/wwood/CoverM) or our [bbmap-pipeline](/MAG-pipeline.md).
 
