@@ -94,7 +94,7 @@ To add Kegg KO annotations to our "${SampleID}.TPM" file you need the mapping fi
 
     make-KO-TPM-fromTPM.sh ${SampleName}.TPM
 
-## Summary of KO statistics for all samples
+### Summary of KO statistics for all samples
 The script will conduct all "${SampleName}.TPM" and "KOsum-{SampleName}.tab" files into a table including SampleID and a header (long-format table). These files can be eg. imported to R. 
 
     sumup-TPM-KOsum-files.sh
@@ -106,7 +106,7 @@ In this step we summarize the TPM of ORFs (GeneID) to the corresponding ContigID
 
     make-GeneID-ContigID-BinId-TPM-fromTPM.sh ${SampleName}.TPM
 
-## Summary of ContigID and BinID statistics for all samples
+### Summary of ContigID and BinID statistics for all samples
 The script will conduct all "ContigID-sumTPM-${SampleID}.tab" and "BinID-sumTPM-${SampleID}.tab" files including SampleID and a header (long-format table). These files can be eg. imported to R. 
 
     sumup-TPM-ContigID-BinID-files.sh
@@ -118,4 +118,33 @@ SampleID-ContigID-TPM-min1.tab :  Sum of gene TPM-counts for each sample for eac
 SampleID-BinID-TPM.tab : Sum of gene TPM-counts for each sample for each BinID  
 SampleID-BinID-TPM-min1.tab :  Sum of gene TPM-counts for each sample for each BinID with a minimum of TPM>=1  
 
+## Taxonomic profiling of TPM counts
+For taxonomic profiling of the reads you can use the taxonomic classification of the ORFs or the Contigs. If you interested in bacterial species you may consider the [MAG-pipeline](https://github.com/tillrobin/iMGMC/blob/master/MAG-pipeline.md) and the [CoverM-tutorial](https://github.com/tillrobin/iMGMC/blob/master/tutorials/map-to-MAGs-Krona-plot.md).
+
+    # Taxomic profiling over different taxonomic levels using GeneID annotations from "${SampleID}.TPM"
+	sumup-TPM-for-TaxLevels-fromTPM.sh ${SampleName}.TPM
+
+
+    # Taxomic profiling over different taxonomic levels using ContigID annotations from "ContigID-sumTPM-${SampleID}.tab"
+	sumup-TPM-for-TaxLevels-fromContigTPM.sh ContigID-sumTPM-${SampleID}.tab
+
+The resulting files sumTPM-Taxonomic-${SampleID}.tab contains summarized TPM-counts for each level in the long format. Annother file contains only the top 12 abundant taxa.
+
+| TaxLevel | Taxonomy | TPM |
+|--|--|--|
+| Superkingdom | Bacteria | 505299 |
+| Superkingdom | unclassified | 394423 |
+| Superkingdom | Eukaryota | 99557.4 |
+| Superkingdom | NA | 475.052 |
+| Superkingdom | Viruses | 226.726 |
+| Superkingdom | Archaea | 19.2614 |
+| Phylum | unclassified | 577044 |
+| Phylum | Firmicutes | 275744 |
+| Phylum | Chordata | 54223 |
+| Phylum | Chlamydiae | 43202.9 |
+| Phylum | Nematoda | 17881.1 |
+
+This data can used for downstream processing like ploting in R:
+
+![TPM-barplots](/images/Taxonomy_Barplots_TaxLevels.png)
 
