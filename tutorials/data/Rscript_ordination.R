@@ -24,7 +24,7 @@ TPM_nmds_df<-cbind.data.frame(TPM_nmds_df,
 plot_TPM_MNDS <- ggplot(data=TPM_nmds_df,aes(NMDS1,NMDS2,colour=Microbiota)) +
   geom_point(size=4) + theme_bw() + labs(title="Ordination by gene profiles") + geom_text(aes(label=row.names(TPM_nmds_df))) 
 
-pdf("plot_ordination_KO.pdf",width = 8,height = 6,onefile=FALSE )
+pdf("plot_ordination_genes.pdf",width = 8,height = 6,onefile=FALSE )
 plot(plot_TPM_MNDS)
 dev.off()
 
