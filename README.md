@@ -15,7 +15,7 @@
 See our paper for details.
 
 **An integrated metagenome catalog enables new insights into the murine gut microbiome**  
-Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez, Ilias Lagkouvardos, John F. Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig.
+Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez, Ilias Lagkouvardos, John F. Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig. *Cell reports* 30, no. 9 (2020): 2909-2922.
 https://doi.org/10.1016/j.celrep.2020.02.036
 
 ### External studies providing data:
