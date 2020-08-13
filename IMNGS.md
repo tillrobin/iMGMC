@@ -4,7 +4,7 @@
 
 ## Description
 
-1323 reconstructed full-lengths 16S sequences were processed via the IMNGS analysis pipeline for its prevalence and abundance in 168,573 SRA samples (November 2017).
+1323 reconstructed full-lengths 16S sequences were processed via the IMNGS analysis pipeline for its prevalence and abundance in 168,573 SRA samples (November 2017). More information about the output fromat you can find on [https://www.imngs.org/](https://www.imngs.org/).
 
 ## Data
 
@@ -18,9 +18,9 @@ Figure: Abundance versus Prevalence plot of Firmicutes (n=556), Bacteroidetes (n
 
 Please see our papers for more details:
 
-**An integrated metagenome catalog enables novel insights into the murine gut microbiome**  
-Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez,  John Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig
-http://biorxiv.org/cgi/content/short/528737v1
+**An integrated metagenome catalog enables new insights into the murine gut microbiome**  
+Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez, Ilias Lagkouvardos, John F. Baines, Thomas Clavel, Alexander Sczyrba, Alice C. McHardy, Till Strowig. *Cell reports* 30, no. 9 (2020): 2909-2922.
+https://doi.org/10.1016/j.celrep.2020.02.036
 
 **IMNGS: A comprehensive open resource of processed 16S rRNA microbial profiles for ecology and diversity studies.**
 Lagkouvardos, I., Joseph, D., Kapfhammer, M., Giritli, S., Horn, M., Haller, D., & Clavel, T.  Scientific reports 6 (2016): 33721.
