@@ -59,6 +59,19 @@ For species abundance determination you can use [CoverM](https://github.com/wwoo
 Accession codes of the used gut metagenome sequences:
 European Nucleotide Archive: [ERP008710](https://www.ebi.ac.uk/ena/data/view/ERP008710), [ERA473426](https://www.ebi.ac.uk/ena/data/view/ERA473426), [PRJEB32890](https://www.ebi.ac.uk/ena/data/view/PRJEB32890) and to the Metagenomics Rapid Genomes/Metagenomes (MG-RAST) with ID 4661127.3/ [mgp5130](https://www.mg-rast.org/linkin.cgi?project=mgp5130)
 
+
+### Updates:
+
+The following files are additional or updated data. The mainly effects annotations files like KEGG-database links and taxonomic descriptions from GTDB.
+
+| Description | Size | Link |
+|--|--|--|
+| translated ORF sequences | 0.7 GB | [iMGMC-GeneID.proteins.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2160792&authkey=AFrsyTm0zNeULVM) |
+| KEGG KofamScan 03/20 | 14 MB | [iMGMC-GeneID-KofamScan.fasta.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2160791&authkey=AIRrgSqxRSC9rH8) |
+| mMAGs GTDB-Tk v1.3 R05-RS95 | x MB | iMGMC-mMAGs-GTDB-Tk-20-08.gz |
+
+
+
 ___
 
 ## Pipelines:
