@@ -68,7 +68,7 @@ The following files are additional or updated data. The mainly effects annotatio
 |--|--|--|
 | translated ORF sequences | 0.7 GB | [iMGMC-GeneID.proteins.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2160792&authkey=AFrsyTm0zNeULVM) |
 | KEGG KofamScan 03/20 | 14 MB | [iMGMC-GeneID-KofamScan.fasta.gz](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2160791&authkey=AIRrgSqxRSC9rH8) |
-| mMAGs GTDB-Tk v1.3 R05-RS95 | x MB | iMGMC-mMAGs-GTDB-Tk-20-08.gz |
+| mMAGs Taxonomy GTDB-Tk-v1.3 rs95 | 1 MB | [iMGMC-mMAGs-GTDB-Tk_v1.3.0-r95.tsv](https://onedrive.live.com/download?cid=36ADEB4B3D109F6F&resid=36ADEB4B3D109F6F%2160795&authkey=AN01HTW27uGPCEM) |
 
 
 
