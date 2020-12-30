@@ -22,7 +22,7 @@
 Please use [Conda](https://conda.io/docs/install/quick.html)
 to install needed enviroment over the [Bioconda channel](https://bioconda.github.io/):
 ```
-conda create iMGMC-PICRUSt -c bioconda picrust pynast fasttree
+conda create -n iMGMC-PICRUSt -c bioconda picrust pynast fasttree
 ```
 
 ## Workflow
