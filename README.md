@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/167003855.svg)](https://zenodo.org/badge/latestdoi/167003855)
 # iMGMC - integrated Mouse Gut Metagenomic Catalog
 
 ![logo](/images/logo.png)
