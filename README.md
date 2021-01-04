@@ -19,7 +19,7 @@ Till R. Lesker, Abilash C. Durairaj, Eric. J.C. Gálvez, Ilias Lagkouvardos, Joh
 https://doi.org/10.1016/j.celrep.2020.02.036
 
 
-## Data:
+## Data: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3631711.svg)](https://doi.org/10.5281/zenodo.3631711)
 
 ### Genecatalog:
 
